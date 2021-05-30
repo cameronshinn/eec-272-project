@@ -1,9 +1,9 @@
-// Taken from $(URL)
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
 #include <cuda_runtime.h>
 #include <cusparse.h>
+#include <string>
 void printMatrix(int m, int n, const float*A, int lda, const char* name)
 {
     for(int row = 0 ; row < m ; row++){

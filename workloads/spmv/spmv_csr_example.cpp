@@ -51,7 +51,11 @@
 #include <stdio.h>            // printf
 #include <stdlib.h>           // EXIT_FAILURE
 
+#include <iostream>
+
 #include "../load_smtx.h"
+
+typedef int idx_t;
 
 #define CHECK_CUDA(func)                                                       \
 {                                                                              \
@@ -76,17 +80,23 @@
 int main(int argc, char* argv[]) {
     // Host problem definition
     CSR<float> hA;
+    std::vector<float> hX_vec(hA.ncols);
+    std::vector<float> hY_vec(hA.nrows);
+
     load_smtx(argv[1], hA);
+
+    for (auto &n : hX_vec) {
+        n = get_random<float>(1.0f, 10.0f);
+    }
 
     const int A_num_rows      = hA.nrows;
     const int A_num_cols      = hA.ncols;
     const int A_nnz           = hA.nnz;
-    int       hA_csrOffsets[] = hA.row_ptrs.data();
-    int       hA_columns[]    = hA.col_idxs.data();
-    float     hA_values[]     = hA.values.data();
-    float     hX[]            = { 1.0f, 2.0f, 3.0f, 4.0f };
-    float     hY[]            = { 0.0f, 0.0f, 0.0f, 0.0f };
-    float     hY_result[]     = { 19.0f, 8.0f, 51.0f, 52.0f };
+    int       *hA_csrOffsets  = hA.row_ptrs.data();
+    int       *hA_columns     = hA.col_idxs.data();
+    float     *hA_values      = hA.values.data();
+    float     *hX             = hX_vec.data();
+    float     *hY             = hY_vec.data();
     float     alpha           = 1.0f;
     float     beta            = 0.0f;
 
@@ -147,20 +157,16 @@ int main(int argc, char* argv[]) {
     CHECK_CUSPARSE( cusparseDestroyDnVec(vecY) )
     CHECK_CUSPARSE( cusparseDestroy(handle) )
     //--------------------------------------------------------------------------
-    // device result check
+    // device result
     CHECK_CUDA( cudaMemcpy(hY, dY, A_num_rows * sizeof(float),
                            cudaMemcpyDeviceToHost) )
-    int correct = 1;
-    for (int i = 0; i < A_num_rows; i++) {
-        if (hY[i] != hY_result[i]) { // direct floating point comparison is not
-            correct = 0;             // reliable
-            break;
-        }
+
+    for (unsigned int i = 0; i < hA.nrows; i++) {
+        std::cout << hY[i] << " ";
     }
-    if (correct)
-        printf("spmv_csr_example test PASSED\n");
-    else
-        printf("spmv_csr_example test FAILED: wrong result\n");
+
+    std::cout << std::endl;
+
     //--------------------------------------------------------------------------
     // device memory deallocation
     CHECK_CUDA( cudaFree(dBuffer) )

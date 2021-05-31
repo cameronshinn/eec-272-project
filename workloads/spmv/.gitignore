@@ -1,0 +1,4 @@
+spmv_csr_example
+*.o
+nvbit_release/
+rn50_traces/

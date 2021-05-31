@@ -7,8 +7,8 @@
 #include <string>
 #include <vector>
 
-typedef unsigned int idx_t;
-typedef unsigned int offset_t;
+typedef int idx_t;
+typedef int offset_t;
 
 template <typename value_t = float>
 struct CSR {

@@ -5,7 +5,7 @@
 #include <cusparse.h>
 #include <string>
 
-#include "load_smtx.h"
+#include "../load_smtx.h"
 
 void printMatrix(int m, int n, const float*A, int lda, const char* name)
 {

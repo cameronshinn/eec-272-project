@@ -2,8 +2,8 @@
 
 # Do not run in docker container
 # Install nvbit
-./../util/tracer_nvbit/install_nvbit.sh
-make -C ../util/tracer_nvbit/
+./../../util/tracer_nvbit/install_nvbit.sh
+make -C ../../util/tracer_nvbit/
 
 # Make directories for workload traces
 sparsities="50 80 95"
@@ -12,6 +12,11 @@ ogdir=$(pwd)
 
 for sp in $sparsities
 do
+    if [ $# -gt 0 ]
+    then
+        ...
+    fi
+
     for layer in $layers
     do
         # Make new dir for layer traces and move into it
@@ -20,14 +25,14 @@ do
         echo "Moving into $tracedir"
         cd $tracedir
 
-        smtx_path=$ogdir/../rn50_magnitude_pruning/$sp/$layer.smtx
+        smtx_path=$ogdir/../../rn50_magnitude_pruning/$sp/$layer.smtx
 
         # Generate traces
         export CUDA_VISIBLE_DEVICES=0
-        LD_PRELOAD=$ogdir/../util/tracer_nvbit/tracer_tool/tracer_tool.so $ogdir/prunedense2csrbyP $smtx_path $sp
+        LD_PRELOAD=$ogdir/../../util/tracer_nvbit/tracer_tool/tracer_tool.so $ogdir/prunedense2csrbyP $smtx_path $sp
 
         # Trace postprocessing for gpgpu-sim input
-        $ogdir/../util/tracer_nvbit/tracer_tool/traces-processing/post-traces-processing ./traces/kernelslist
+        $ogdir/../../util/tracer_nvbit/tracer_tool/traces-processing/post-traces-processing ./traces/kernelslist
 
         # Move back to original directory
         echo "Moving back to $ogdir"

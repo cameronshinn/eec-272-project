@@ -1,3 +1,4 @@
 prunedense2csrbyP
 *.o
-traces/
+nvbit_release/
+rn50_traces/

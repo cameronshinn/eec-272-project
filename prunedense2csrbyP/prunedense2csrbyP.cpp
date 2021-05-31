@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <assert.h>
 #include <cuda_runtime.h>
+#include <cuda_profiler_api.h>
 #include <cusparse.h>
 #include <string>
 
@@ -135,6 +136,7 @@ int main(int argc, char*argv[])
     cudaStat1 = cudaMalloc((void**)&d_work, lworkInBytes);
     assert(cudaSuccess == cudaStat1);
 /* step 4: compute csrRowPtrC and nnzC */
+    cudaProfilerStart();
     status = cusparseSpruneDense2csrNnzByPercentage(
         handle,
         m,
@@ -173,6 +175,7 @@ int main(int argc, char*argv[])
         d_csrColIndC,
         info,
         d_work);
+    cudaProfilerStop();
     assert(CUSPARSE_STATUS_SUCCESS == status);
     cudaStat1 = cudaDeviceSynchronize();
     assert(cudaSuccess == cudaStat1);

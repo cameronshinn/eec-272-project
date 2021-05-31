@@ -5,3 +5,5 @@ sim_run_*
 *.DS_Store*
 traces/
 4.2/
+rn50_magnitude_pruning/
+gpucomputingsdk_4.2.9_linux.run

@@ -2,3 +2,6 @@
 	path = gpu-simulator/gpgpu-sim
 	url = https://github.com/cameronshinn/gpgpu-sim_distribution.git
 	branch = cross-warp-coalesce
+[submodule "gpu-app-collection"]
+	path = gpu-app-collection
+	url = https://github.com/accel-sim/gpu-app-collection

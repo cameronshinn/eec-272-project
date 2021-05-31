@@ -4,6 +4,9 @@
 #include <cuda_runtime.h>
 #include <cusparse.h>
 #include <string>
+
+#include "load_smtx.h"
+
 void printMatrix(int m, int n, const float*A, int lda, const char* name)
 {
     for(int row = 0 ; row < m ; row++){
@@ -13,6 +16,7 @@ void printMatrix(int m, int n, const float*A, int lda, const char* name)
         }
     }
 }
+
 void printCsr(
     int m,
     int n,
@@ -35,6 +39,27 @@ void printCsr(
         }
     }
 }
+
+template <typename value_t>
+std::vector<value_t> csr_to_dense(CSR<value_t> sparse) {
+    std::vector<value_t> dense(sparse.nrows * sparse.ncols);  // Populate with zeros
+
+    // Fill in non-zeros
+    for (idx_t m = 0; m < sparse.nrows; m++) {
+        offset_t row_start = sparse.row_ptrs[m];
+        offset_t row_end = sparse.row_ptrs[m + 1];
+
+        for (unsigned int i = row_start; i < row_end; i++) {
+            idx_t n = sparse.col_idxs[i];
+            value_t val = sparse.values[i];
+
+            dense[m * sparse.ncols + n] = val;
+        }
+    }
+
+    return dense;
+}
+
 int main(int argc, char*argv[])
 {
     cusparseHandle_t handle = NULL;
@@ -47,17 +72,15 @@ int main(int argc, char*argv[])
     cudaError_t cudaStat3 = cudaSuccess;
     cudaError_t cudaStat4 = cudaSuccess;
     cudaError_t cudaStat5 = cudaSuccess;
-    int m = std::stoi(argv[1]);
-    int n = std::stoi(argv[2]);
+
+    // Read in pruned matrix and convert to dense
+    CSR<float> A_sparse;
+    load_smtx(argv[1], A_sparse);
+    std::vector<float> A = csr_to_dense(A_sparse);
+
+    int m = A_sparse.nrows;
+    int n = A_sparse.ncols;
     const int lda = m;
-    /*
- *      |    1     0     2     -3  |
- *      |    0     4     0     0   |
- *  A = |    5     0     6     7   |
- *      |    0     8     0     9   |
- *
- */
-    const float A[lda*n] = {1, 0, 5, 0, 0, 4, 0, 8, 2, 0, 6, 0, -3, 0, 7, 9};
     int* csrRowPtrC = NULL;
     int* csrColIndC = NULL;
     float* csrValC  = NULL;
@@ -68,10 +91,10 @@ int main(int argc, char*argv[])
     size_t lworkInBytes = 0;
     char *d_work = NULL;
     int nnzC = 0;
-    float percentage = 50; /* 50% of nnz */
+    float percentage = std::stof(argv[2]);
     printf("example of pruneDense2csrByPercentage \n");
     printf("prune out %.1f percentage of A \n", percentage);
-    printMatrix(m, n, A, lda, "A");
+    printMatrix(m, n, A.data(), lda, "A");
 /* step 1: create cusparse handle, bind a stream */
     cudaStat1 = cudaStreamCreateWithFlags(&stream, cudaStreamNonBlocking);
     assert(cudaSuccess == cudaStat1);
@@ -90,7 +113,7 @@ int main(int argc, char*argv[])
     cudaStat2 = cudaMalloc ((void**)&d_csrRowPtrC, sizeof(int)*(m+1) );
     assert(cudaSuccess == cudaStat1);
     assert(cudaSuccess == cudaStat2);
-    cudaStat1 = cudaMemcpy(d_A, A, sizeof(float)*lda*n, cudaMemcpyHostToDevice);
+    cudaStat1 = cudaMemcpy(d_A, A.data(), sizeof(float)*lda*n, cudaMemcpyHostToDevice);
     assert(cudaSuccess == cudaStat1);
     /* step 3: query workspace */
     status = cusparseSpruneDense2csrByPercentage_bufferSizeExt(

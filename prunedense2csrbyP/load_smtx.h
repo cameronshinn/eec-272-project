@@ -83,13 +83,19 @@ void load_smtx(
         smtx_file.close();
     }
 
-    if (out.row_ptrs.size() != out.nrows + 1 ||
-        out.col_idxs.size() != out.nnz ||
+    if (out.col_idxs.size() != out.nnz ||
         out.values.size() != out.nnz) {
         std::ostringstream ss;
         ss << "Number of non-zeroes in \""  // TODO: Make error messages for each case
            << smtx_path
+           << " ("
+           << out.nnz
+           << ") "
            << "\" does not match the count in the first line";
         throw (std::invalid_argument(ss.str()));
+    }
+
+    if (out.row_ptrs.size() != out.nrows + 1) {
+
     }
 }

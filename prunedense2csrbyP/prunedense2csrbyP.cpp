@@ -94,7 +94,7 @@ int main(int argc, char*argv[])
     float percentage = std::stof(argv[2]);
     printf("example of pruneDense2csrByPercentage \n");
     printf("prune out %.1f percentage of A \n", percentage);
-    printMatrix(m, n, A.data(), lda, "A");
+    // printMatrix(m, n, A.data(), lda, "A");
 /* step 1: create cusparse handle, bind a stream */
     cudaStat1 = cudaStreamCreateWithFlags(&stream, cudaStreamNonBlocking);
     assert(cudaSuccess == cudaStat1);
@@ -189,7 +189,7 @@ int main(int argc, char*argv[])
     assert(cudaSuccess == cudaStat1);
     assert(cudaSuccess == cudaStat2);
     assert(cudaSuccess == cudaStat3);
-    printCsr(m, n, nnzC, descrC, csrValC, csrRowPtrC, csrColIndC, "C");
+    // printCsr(m, n, nnzC, descrC, csrValC, csrRowPtrC, csrColIndC, "C");
 /* free resources */
     if (d_A         ) cudaFree(d_A);
     if (d_csrRowPtrC) cudaFree(d_csrRowPtrC);

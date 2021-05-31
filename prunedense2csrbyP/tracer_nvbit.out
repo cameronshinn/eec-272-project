@@ -1,0 +1,2738 @@
+--2021-05-31 01:30:48--  https://github.com/NVlabs/NVBit/releases/download/1.5.3/nvbit-Linux-x86_64-1.5.3.tar.bz2
+Resolving github.com (github.com)... 192.30.255.112
+Connecting to github.com (github.com)|192.30.255.112|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-releases.githubusercontent.com/214004640/67433700-69fe-11eb-952d-ba6de8bdf65e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210531%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210531T083048Z&X-Amz-Expires=300&X-Amz-Signature=2bfc924bd3c9d330f6791c9da08738c40ed9dca81bd7bb99b7bbbf875f6a5042&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=214004640&response-content-disposition=attachment%3B%20filename%3Dnvbit-Linux-x86_64-1.5.3.tar.bz2&response-content-type=application%2Foctet-stream [following]
+--2021-05-31 01:30:48--  https://github-releases.githubusercontent.com/214004640/67433700-69fe-11eb-952d-ba6de8bdf65e?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210531%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210531T083048Z&X-Amz-Expires=300&X-Amz-Signature=2bfc924bd3c9d330f6791c9da08738c40ed9dca81bd7bb99b7bbbf875f6a5042&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=214004640&response-content-disposition=attachment%3B%20filename%3Dnvbit-Linux-x86_64-1.5.3.tar.bz2&response-content-type=application%2Foctet-stream
+Resolving github-releases.githubusercontent.com (github-releases.githubusercontent.com)... 185.199.110.154, 185.199.108.154, 185.199.111.154, ...
+Connecting to github-releases.githubusercontent.com (github-releases.githubusercontent.com)|185.199.110.154|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 425804 (416K) [application/octet-stream]
+Saving to: ‘nvbit-Linux-x86_64-1.5.3.tar.bz2’
+
+     0K .......... .......... .......... .......... .......... 12% 1.12M 0s
+    50K .......... .......... .......... .......... .......... 24% 1.29M 0s
+   100K .......... .......... .......... .......... .......... 36% 1.21M 0s
+   150K .......... .......... .......... .......... .......... 48% 1.27M 0s
+   200K .......... .......... .......... .......... .......... 60% 1.18M 0s
+   250K .......... .......... .......... .......... .......... 72% 1.83M 0s
+   300K .......... .......... .......... .......... .......... 84% 1.91M 0s
+   350K .......... .......... .......... .......... .......... 96% 1.93M 0s
+   400K .......... .....                                      100% 1.75M=0.3s
+
+2021-05-31 01:30:49 (1.41 MB/s) - ‘nvbit-Linux-x86_64-1.5.3.tar.bz2’ saved [425804/425804]
+
+make: Entering directory '/home/ctshinn/eec-272-project/util/tracer_nvbit'
+make -C tracer_tool
+make[1]: Entering directory '/home/ctshinn/eec-272-project/util/tracer_nvbit/tracer_tool'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/ctshinn/eec-272-project/util/tracer_nvbit/tracer_tool'
+make -C tracer_tool/traces-processing
+make[1]: Entering directory '/home/ctshinn/eec-272-project/util/tracer_nvbit/tracer_tool/traces-processing'
+make[1]: 'post-traces-processing' is up to date.
+make[1]: Leaving directory '/home/ctshinn/eec-272-project/util/tracer_nvbit/tracer_tool/traces-processing'
+#make -C silicon_checkpoint_tool
+make: Leaving directory '/home/ctshinn/eec-272-project/util/tracer_nvbit'
+Moving into /home/ctshinn/eec-272-project/prunedense2csrbyP/rn50_traces/50/bottleneck_1_block_group2_1_1/
+------------- NVBit (NVidia Binary Instrumentation Tool v1.5.3) Loaded --------------
+NVBit core environment variables (mostly for nvbit-devs):
+            NVDISASM = nvdisasm - override default nvdisasm found in PATH
+            NOBANNER = 0 - if set, does not print this banner
+---------------------------------------------------------------------------------
+         INSTR_BEGIN = 0 - Beginning of the instruction interval where to apply instrumentation
+           INSTR_END = 4294967295 - End of the instruction interval where to apply instrumentation
+    EXCLUDE_PRED_OFF = 1 - Exclude predicated off instruction from count
+DYNAMIC_KERNEL_LIMIT_END = 0 - Limit of the number kernel to be printed, 0 means no limit
+DYNAMIC_KERNEL_LIMIT_START = 0 - start to report kernel from this kernel id, 0 means starts from the beginning, i.e. first kernel
+   ACTIVE_FROM_START = 1 - Start instruction tracing from start or wait for cuProfilerStart and cuProfilerStop. If set to 0, DYNAMIC_KERNEL_LIMIT options have no effect
+        TOOL_VERBOSE = 0 - Enable verbosity inside the tool
+       TOOL_COMPRESS = 1 - Enable traces compression
+     TOOL_TRACE_CORE = 0 - write the core id in the traces
+----------------------------------------------------------------------------------------------------
+example of pruneDense2csrByPercentage 
+prune out 50.0 percentage of A 
+lworkInBytes = 1049888 
+Writing results to ./traces/kernel-1.trace
+Writing results to ./traces/kernel-2.trace
+Writing results to ./traces/kernel-3.trace
+Writing results to ./traces/kernel-4.trace
+Writing results to ./traces/kernel-5.trace
+Writing results to ./traces/kernel-6.trace
+Writing results to ./traces/kernel-7.trace
+Writing results to ./traces/kernel-8.trace
+Writing results to ./traces/kernel-9.trace
+Writing results to ./traces/kernel-10.trace
+Writing results to ./traces/kernel-11.trace
+Writing results to ./traces/kernel-12.trace
+Writing results to ./traces/kernel-13.trace
+Writing results to ./traces/kernel-14.trace
+Writing results to ./traces/kernel-15.trace
+Writing results to ./traces/kernel-16.trace
+Writing results to ./traces/kernel-17.trace
+Writing results to ./traces/kernel-18.trace
+Writing results to ./traces/kernel-19.trace
+Writing results to ./traces/kernel-20.trace
+Writing results to ./traces/kernel-21.trace
+Writing results to ./traces/kernel-22.trace
+Writing results to ./traces/kernel-23.trace
+Writing results to ./traces/kernel-24.trace
+Writing results to ./traces/kernel-25.trace
+Writing results to ./traces/kernel-26.trace
+Writing results to ./traces/kernel-27.trace
+Writing results to ./traces/kernel-28.trace
+Writing results to ./traces/kernel-29.trace
+Writing results to ./traces/kernel-30.trace
+Writing results to ./traces/kernel-31.trace
+Writing results to ./traces/kernel-32.trace
+Writing results to ./traces/kernel-33.trace
+Writing results to ./traces/kernel-34.trace
+Writing results to ./traces/kernel-35.trace
+Writing results to ./traces/kernel-36.trace
+Writing results to ./traces/kernel-37.trace
+Writing results to ./traces/kernel-38.trace
+Writing results to ./traces/kernel-39.trace
+Writing results to ./traces/kernel-40.trace
+Writing results to ./traces/kernel-41.trace
+Writing results to ./traces/kernel-42.trace
+Writing results to ./traces/kernel-43.trace
+Writing results to ./traces/kernel-44.trace
+Writing results to ./traces/kernel-45.trace
+Writing results to ./traces/kernel-46.trace
+Writing results to ./traces/kernel-47.trace
+Writing results to ./traces/kernel-48.trace
+Writing results to ./traces/kernel-49.trace
+Writing results to ./traces/kernel-50.trace
+Writing results to ./traces/kernel-51.trace
+Writing results to ./traces/kernel-52.trace
+Writing results to ./traces/kernel-53.trace
+Writing results to ./traces/kernel-54.trace
+Writing results to ./traces/kernel-55.trace
+Writing results to ./traces/kernel-56.trace
+Writing results to ./traces/kernel-57.trace
+Writing results to ./traces/kernel-58.trace
+Writing results to ./traces/kernel-59.trace
+Writing results to ./traces/kernel-60.trace
+Writing results to ./traces/kernel-61.trace
+Writing results to ./traces/kernel-62.trace
+Writing results to ./traces/kernel-63.trace
+Writing results to ./traces/kernel-64.trace
+Writing results to ./traces/kernel-65.trace
+Writing results to ./traces/kernel-66.trace
+Writing results to ./traces/kernel-67.trace
+Writing results to ./traces/kernel-68.trace
+Writing results to ./traces/kernel-69.trace
+Writing results to ./traces/kernel-70.trace
+Writing results to ./traces/kernel-71.trace
+Writing results to ./traces/kernel-72.trace
+Writing results to ./traces/kernel-73.trace
+Writing results to ./traces/kernel-74.trace
+Writing results to ./traces/kernel-75.trace
+Writing results to ./traces/kernel-76.trace
+Writing results to ./traces/kernel-77.trace
+Writing results to ./traces/kernel-78.trace
+Writing results to ./traces/kernel-79.trace
+Writing results to ./traces/kernel-80.trace
+Writing results to ./traces/kernel-81.trace
+Writing results to ./traces/kernel-82.trace
+Writing results to ./traces/kernel-83.trace
+Writing results to ./traces/kernel-84.trace
+Writing results to ./traces/kernel-85.trace
+Writing results to ./traces/kernel-86.trace
+Writing results to ./traces/kernel-87.trace
+Writing results to ./traces/kernel-88.trace
+Writing results to ./traces/kernel-89.trace
+Writing results to ./traces/kernel-90.trace
+Writing results to ./traces/kernel-91.trace
+Writing results to ./traces/kernel-92.trace
+Writing results to ./traces/kernel-93.trace
+Writing results to ./traces/kernel-94.trace
+Writing results to ./traces/kernel-95.trace
+Writing results to ./traces/kernel-96.trace
+Writing results to ./traces/kernel-97.trace
+Writing results to ./traces/kernel-98.trace
+Writing results to ./traces/kernel-99.trace
+Writing results to ./traces/kernel-100.trace
+Writing results to ./traces/kernel-101.trace
+Writing results to ./traces/kernel-102.trace
+Writing results to ./traces/kernel-103.trace
+Writing results to ./traces/kernel-104.trace
+Writing results to ./traces/kernel-105.trace
+Writing results to ./traces/kernel-106.trace
+Writing results to ./traces/kernel-107.trace
+Writing results to ./traces/kernel-108.trace
+Writing results to ./traces/kernel-109.trace
+Writing results to ./traces/kernel-110.trace
+Writing results to ./traces/kernel-111.trace
+Writing results to ./traces/kernel-112.trace
+Writing results to ./traces/kernel-113.trace
+Writing results to ./traces/kernel-114.trace
+Writing results to ./traces/kernel-115.trace
+Writing results to ./traces/kernel-116.trace
+Writing results to ./traces/kernel-117.trace
+Writing results to ./traces/kernel-118.trace
+Writing results to ./traces/kernel-119.trace
+Writing results to ./traces/kernel-120.trace
+Writing results to ./traces/kernel-121.trace
+Writing results to ./traces/kernel-122.trace
+Writing results to ./traces/kernel-123.trace
+Writing results to ./traces/kernel-124.trace
+Writing results to ./traces/kernel-125.trace
+Writing results to ./traces/kernel-126.trace
+Writing results to ./traces/kernel-127.trace
+Writing results to ./traces/kernel-128.trace
+Writing results to ./traces/kernel-129.trace
+Writing results to ./traces/kernel-130.trace
+Writing results to ./traces/kernel-131.trace
+Writing results to ./traces/kernel-132.trace
+Writing results to ./traces/kernel-133.trace
+Writing results to ./traces/kernel-134.trace
+Writing results to ./traces/kernel-135.trace
+Writing results to ./traces/kernel-136.trace
+Writing results to ./traces/kernel-137.trace
+Writing results to ./traces/kernel-138.trace
+Writing results to ./traces/kernel-139.trace
+Writing results to ./traces/kernel-140.trace
+Writing results to ./traces/kernel-141.trace
+Writing results to ./traces/kernel-142.trace
+Writing results to ./traces/kernel-143.trace
+Writing results to ./traces/kernel-144.trace
+Writing results to ./traces/kernel-145.trace
+Writing results to ./traces/kernel-146.trace
+Writing results to ./traces/kernel-147.trace
+Writing results to ./traces/kernel-148.trace
+Writing results to ./traces/kernel-149.trace
+Writing results to ./traces/kernel-150.trace
+Writing results to ./traces/kernel-151.trace
+Writing results to ./traces/kernel-152.trace
+Writing results to ./traces/kernel-153.trace
+Writing results to ./traces/kernel-154.trace
+Writing results to ./traces/kernel-155.trace
+Writing results to ./traces/kernel-156.trace
+Writing results to ./traces/kernel-157.trace
+Writing results to ./traces/kernel-158.trace
+Writing results to ./traces/kernel-159.trace
+Writing results to ./traces/kernel-160.trace
+Writing results to ./traces/kernel-161.trace
+Writing results to ./traces/kernel-162.trace
+Writing results to ./traces/kernel-163.trace
+Writing results to ./traces/kernel-164.trace
+Writing results to ./traces/kernel-165.trace
+nnzC = 32768
+Writing results to ./traces/kernel-166.trace
+Processing file ./traces/kernel-1.trace
+Processing file ./traces/kernel-2.trace
+Processing file ./traces/kernel-3.trace
+Processing file ./traces/kernel-4.trace
+Processing file ./traces/kernel-5.trace
+Processing file ./traces/kernel-6.trace
+Processing file ./traces/kernel-7.trace
+Processing file ./traces/kernel-8.trace
+Processing file ./traces/kernel-9.trace
+Processing file ./traces/kernel-10.trace
+Processing file ./traces/kernel-11.trace
+Processing file ./traces/kernel-12.trace
+Processing file ./traces/kernel-13.trace
+Processing file ./traces/kernel-14.trace
+Processing file ./traces/kernel-15.trace
+Processing file ./traces/kernel-16.trace
+Processing file ./traces/kernel-17.trace
+Processing file ./traces/kernel-18.trace
+Processing file ./traces/kernel-19.trace
+Processing file ./traces/kernel-20.trace
+Processing file ./traces/kernel-21.trace
+Processing file ./traces/kernel-22.trace
+Processing file ./traces/kernel-23.trace
+Processing file ./traces/kernel-24.trace
+Processing file ./traces/kernel-25.trace
+Processing file ./traces/kernel-26.trace
+Processing file ./traces/kernel-27.trace
+Processing file ./traces/kernel-28.trace
+Processing file ./traces/kernel-29.trace
+Processing file ./traces/kernel-30.trace
+Processing file ./traces/kernel-31.trace
+Processing file ./traces/kernel-32.trace
+Processing file ./traces/kernel-33.trace
+Processing file ./traces/kernel-34.trace
+Processing file ./traces/kernel-35.trace
+Processing file ./traces/kernel-36.trace
+Processing file ./traces/kernel-37.trace
+Processing file ./traces/kernel-38.trace
+Processing file ./traces/kernel-39.trace
+Processing file ./traces/kernel-40.trace
+Processing file ./traces/kernel-41.trace
+Processing file ./traces/kernel-42.trace
+Processing file ./traces/kernel-43.trace
+Processing file ./traces/kernel-44.trace
+Processing file ./traces/kernel-45.trace
+Processing file ./traces/kernel-46.trace
+Processing file ./traces/kernel-47.trace
+Processing file ./traces/kernel-48.trace
+Processing file ./traces/kernel-49.trace
+Processing file ./traces/kernel-50.trace
+Processing file ./traces/kernel-51.trace
+Processing file ./traces/kernel-52.trace
+Processing file ./traces/kernel-53.trace
+Processing file ./traces/kernel-54.trace
+Processing file ./traces/kernel-55.trace
+Processing file ./traces/kernel-56.trace
+Processing file ./traces/kernel-57.trace
+Processing file ./traces/kernel-58.trace
+Processing file ./traces/kernel-59.trace
+Processing file ./traces/kernel-60.trace
+Processing file ./traces/kernel-61.trace
+Processing file ./traces/kernel-62.trace
+Processing file ./traces/kernel-63.trace
+Processing file ./traces/kernel-64.trace
+Processing file ./traces/kernel-65.trace
+Processing file ./traces/kernel-66.trace
+Processing file ./traces/kernel-67.trace
+Processing file ./traces/kernel-68.trace
+Processing file ./traces/kernel-69.trace
+Processing file ./traces/kernel-70.trace
+Processing file ./traces/kernel-71.trace
+Processing file ./traces/kernel-72.trace
+Processing file ./traces/kernel-73.trace
+Processing file ./traces/kernel-74.trace
+Processing file ./traces/kernel-75.trace
+Processing file ./traces/kernel-76.trace
+Processing file ./traces/kernel-77.trace
+Processing file ./traces/kernel-78.trace
+Processing file ./traces/kernel-79.trace
+Processing file ./traces/kernel-80.trace
+Processing file ./traces/kernel-81.trace
+Processing file ./traces/kernel-82.trace
+Processing file ./traces/kernel-83.trace
+Processing file ./traces/kernel-84.trace
+Processing file ./traces/kernel-85.trace
+Processing file ./traces/kernel-86.trace
+Processing file ./traces/kernel-87.trace
+Processing file ./traces/kernel-88.trace
+Processing file ./traces/kernel-89.trace
+Processing file ./traces/kernel-90.trace
+Processing file ./traces/kernel-91.trace
+Processing file ./traces/kernel-92.trace
+Processing file ./traces/kernel-93.trace
+Processing file ./traces/kernel-94.trace
+Processing file ./traces/kernel-95.trace
+Processing file ./traces/kernel-96.trace
+Processing file ./traces/kernel-97.trace
+Processing file ./traces/kernel-98.trace
+Processing file ./traces/kernel-99.trace
+Processing file ./traces/kernel-100.trace
+Processing file ./traces/kernel-101.trace
+Processing file ./traces/kernel-102.trace
+Processing file ./traces/kernel-103.trace
+Processing file ./traces/kernel-104.trace
+Processing file ./traces/kernel-105.trace
+Processing file ./traces/kernel-106.trace
+Processing file ./traces/kernel-107.trace
+Processing file ./traces/kernel-108.trace
+Processing file ./traces/kernel-109.trace
+Processing file ./traces/kernel-110.trace
+Processing file ./traces/kernel-111.trace
+Processing file ./traces/kernel-112.trace
+Processing file ./traces/kernel-113.trace
+Processing file ./traces/kernel-114.trace
+Processing file ./traces/kernel-115.trace
+Processing file ./traces/kernel-116.trace
+Processing file ./traces/kernel-117.trace
+Processing file ./traces/kernel-118.trace
+Processing file ./traces/kernel-119.trace
+Processing file ./traces/kernel-120.trace
+Processing file ./traces/kernel-121.trace
+Processing file ./traces/kernel-122.trace
+Processing file ./traces/kernel-123.trace
+Processing file ./traces/kernel-124.trace
+Processing file ./traces/kernel-125.trace
+Processing file ./traces/kernel-126.trace
+Processing file ./traces/kernel-127.trace
+Processing file ./traces/kernel-128.trace
+Processing file ./traces/kernel-129.trace
+Processing file ./traces/kernel-130.trace
+Processing file ./traces/kernel-131.trace
+Processing file ./traces/kernel-132.trace
+Processing file ./traces/kernel-133.trace
+Processing file ./traces/kernel-134.trace
+Processing file ./traces/kernel-135.trace
+Processing file ./traces/kernel-136.trace
+Processing file ./traces/kernel-137.trace
+Processing file ./traces/kernel-138.trace
+Processing file ./traces/kernel-139.trace
+Processing file ./traces/kernel-140.trace
+Processing file ./traces/kernel-141.trace
+Processing file ./traces/kernel-142.trace
+Processing file ./traces/kernel-143.trace
+Processing file ./traces/kernel-144.trace
+Processing file ./traces/kernel-145.trace
+Processing file ./traces/kernel-146.trace
+Processing file ./traces/kernel-147.trace
+Processing file ./traces/kernel-148.trace
+Processing file ./traces/kernel-149.trace
+Processing file ./traces/kernel-150.trace
+Processing file ./traces/kernel-151.trace
+Processing file ./traces/kernel-152.trace
+Processing file ./traces/kernel-153.trace
+Processing file ./traces/kernel-154.trace
+Processing file ./traces/kernel-155.trace
+Processing file ./traces/kernel-156.trace
+Processing file ./traces/kernel-157.trace
+Processing file ./traces/kernel-158.trace
+Processing file ./traces/kernel-159.trace
+Processing file ./traces/kernel-160.trace
+Processing file ./traces/kernel-161.trace
+Processing file ./traces/kernel-162.trace
+Processing file ./traces/kernel-163.trace
+Processing file ./traces/kernel-164.trace
+Processing file ./traces/kernel-165.trace
+Processing file ./traces/kernel-166.trace
+Moving back to /home/ctshinn/eec-272-project/prunedense2csrbyP
+Moving into /home/ctshinn/eec-272-project/prunedense2csrbyP/rn50_traces/50/bottleneck_1_block_group_projection_block_group3/
+------------- NVBit (NVidia Binary Instrumentation Tool v1.5.3) Loaded --------------
+NVBit core environment variables (mostly for nvbit-devs):
+            NVDISASM = nvdisasm - override default nvdisasm found in PATH
+            NOBANNER = 0 - if set, does not print this banner
+---------------------------------------------------------------------------------
+         INSTR_BEGIN = 0 - Beginning of the instruction interval where to apply instrumentation
+           INSTR_END = 4294967295 - End of the instruction interval where to apply instrumentation
+    EXCLUDE_PRED_OFF = 1 - Exclude predicated off instruction from count
+DYNAMIC_KERNEL_LIMIT_END = 0 - Limit of the number kernel to be printed, 0 means no limit
+DYNAMIC_KERNEL_LIMIT_START = 0 - start to report kernel from this kernel id, 0 means starts from the beginning, i.e. first kernel
+   ACTIVE_FROM_START = 1 - Start instruction tracing from start or wait for cuProfilerStart and cuProfilerStop. If set to 0, DYNAMIC_KERNEL_LIMIT options have no effect
+        TOOL_VERBOSE = 0 - Enable verbosity inside the tool
+       TOOL_COMPRESS = 1 - Enable traces compression
+     TOOL_TRACE_CORE = 0 - write the core id in the traces
+----------------------------------------------------------------------------------------------------
+example of pruneDense2csrByPercentage 
+prune out 50.0 percentage of A 
+lworkInBytes = 2098976 
+Writing results to ./traces/kernel-1.trace
+Writing results to ./traces/kernel-2.trace
+Writing results to ./traces/kernel-3.trace
+Writing results to ./traces/kernel-4.trace
+Writing results to ./traces/kernel-5.trace
+Writing results to ./traces/kernel-6.trace
+Writing results to ./traces/kernel-7.trace
+Writing results to ./traces/kernel-8.trace
+Writing results to ./traces/kernel-9.trace
+Writing results to ./traces/kernel-10.trace
+Writing results to ./traces/kernel-11.trace
+Writing results to ./traces/kernel-12.trace
+Writing results to ./traces/kernel-13.trace
+Writing results to ./traces/kernel-14.trace
+Writing results to ./traces/kernel-15.trace
+Writing results to ./traces/kernel-16.trace
+Writing results to ./traces/kernel-17.trace
+Writing results to ./traces/kernel-18.trace
+Writing results to ./traces/kernel-19.trace
+Writing results to ./traces/kernel-20.trace
+Writing results to ./traces/kernel-21.trace
+Writing results to ./traces/kernel-22.trace
+Writing results to ./traces/kernel-23.trace
+Writing results to ./traces/kernel-24.trace
+Writing results to ./traces/kernel-25.trace
+Writing results to ./traces/kernel-26.trace
+Writing results to ./traces/kernel-27.trace
+Writing results to ./traces/kernel-28.trace
+Writing results to ./traces/kernel-29.trace
+Writing results to ./traces/kernel-30.trace
+Writing results to ./traces/kernel-31.trace
+Writing results to ./traces/kernel-32.trace
+Writing results to ./traces/kernel-33.trace
+Writing results to ./traces/kernel-34.trace
+Writing results to ./traces/kernel-35.trace
+Writing results to ./traces/kernel-36.trace
+Writing results to ./traces/kernel-37.trace
+Writing results to ./traces/kernel-38.trace
+Writing results to ./traces/kernel-39.trace
+Writing results to ./traces/kernel-40.trace
+Writing results to ./traces/kernel-41.trace
+Writing results to ./traces/kernel-42.trace
+Writing results to ./traces/kernel-43.trace
+Writing results to ./traces/kernel-44.trace
+Writing results to ./traces/kernel-45.trace
+Writing results to ./traces/kernel-46.trace
+Writing results to ./traces/kernel-47.trace
+Writing results to ./traces/kernel-48.trace
+Writing results to ./traces/kernel-49.trace
+Writing results to ./traces/kernel-50.trace
+Writing results to ./traces/kernel-51.trace
+Writing results to ./traces/kernel-52.trace
+Writing results to ./traces/kernel-53.trace
+Writing results to ./traces/kernel-54.trace
+Writing results to ./traces/kernel-55.trace
+Writing results to ./traces/kernel-56.trace
+Writing results to ./traces/kernel-57.trace
+Writing results to ./traces/kernel-58.trace
+Writing results to ./traces/kernel-59.trace
+Writing results to ./traces/kernel-60.trace
+Writing results to ./traces/kernel-61.trace
+Writing results to ./traces/kernel-62.trace
+Writing results to ./traces/kernel-63.trace
+Writing results to ./traces/kernel-64.trace
+Writing results to ./traces/kernel-65.trace
+Writing results to ./traces/kernel-66.trace
+Writing results to ./traces/kernel-67.trace
+Writing results to ./traces/kernel-68.trace
+Writing results to ./traces/kernel-69.trace
+Writing results to ./traces/kernel-70.trace
+Writing results to ./traces/kernel-71.trace
+Writing results to ./traces/kernel-72.trace
+Writing results to ./traces/kernel-73.trace
+Writing results to ./traces/kernel-74.trace
+Writing results to ./traces/kernel-75.trace
+Writing results to ./traces/kernel-76.trace
+Writing results to ./traces/kernel-77.trace
+Writing results to ./traces/kernel-78.trace
+Writing results to ./traces/kernel-79.trace
+Writing results to ./traces/kernel-80.trace
+Writing results to ./traces/kernel-81.trace
+Writing results to ./traces/kernel-82.trace
+Writing results to ./traces/kernel-83.trace
+Writing results to ./traces/kernel-84.trace
+Writing results to ./traces/kernel-85.trace
+Writing results to ./traces/kernel-86.trace
+Writing results to ./traces/kernel-87.trace
+Writing results to ./traces/kernel-88.trace
+Writing results to ./traces/kernel-89.trace
+Writing results to ./traces/kernel-90.trace
+Writing results to ./traces/kernel-91.trace
+Writing results to ./traces/kernel-92.trace
+Writing results to ./traces/kernel-93.trace
+Writing results to ./traces/kernel-94.trace
+Writing results to ./traces/kernel-95.trace
+Writing results to ./traces/kernel-96.trace
+Writing results to ./traces/kernel-97.trace
+Writing results to ./traces/kernel-98.trace
+Writing results to ./traces/kernel-99.trace
+Writing results to ./traces/kernel-100.trace
+Writing results to ./traces/kernel-101.trace
+Writing results to ./traces/kernel-102.trace
+Writing results to ./traces/kernel-103.trace
+Writing results to ./traces/kernel-104.trace
+Writing results to ./traces/kernel-105.trace
+Writing results to ./traces/kernel-106.trace
+Writing results to ./traces/kernel-107.trace
+Writing results to ./traces/kernel-108.trace
+Writing results to ./traces/kernel-109.trace
+Writing results to ./traces/kernel-110.trace
+Writing results to ./traces/kernel-111.trace
+Writing results to ./traces/kernel-112.trace
+Writing results to ./traces/kernel-113.trace
+Writing results to ./traces/kernel-114.trace
+Writing results to ./traces/kernel-115.trace
+Writing results to ./traces/kernel-116.trace
+Writing results to ./traces/kernel-117.trace
+Writing results to ./traces/kernel-118.trace
+Writing results to ./traces/kernel-119.trace
+Writing results to ./traces/kernel-120.trace
+Writing results to ./traces/kernel-121.trace
+Writing results to ./traces/kernel-122.trace
+Writing results to ./traces/kernel-123.trace
+Writing results to ./traces/kernel-124.trace
+Writing results to ./traces/kernel-125.trace
+Writing results to ./traces/kernel-126.trace
+Writing results to ./traces/kernel-127.trace
+Writing results to ./traces/kernel-128.trace
+Writing results to ./traces/kernel-129.trace
+Writing results to ./traces/kernel-130.trace
+Writing results to ./traces/kernel-131.trace
+Writing results to ./traces/kernel-132.trace
+Writing results to ./traces/kernel-133.trace
+Writing results to ./traces/kernel-134.trace
+Writing results to ./traces/kernel-135.trace
+Writing results to ./traces/kernel-136.trace
+Writing results to ./traces/kernel-137.trace
+Writing results to ./traces/kernel-138.trace
+Writing results to ./traces/kernel-139.trace
+Writing results to ./traces/kernel-140.trace
+Writing results to ./traces/kernel-141.trace
+Writing results to ./traces/kernel-142.trace
+Writing results to ./traces/kernel-143.trace
+Writing results to ./traces/kernel-144.trace
+Writing results to ./traces/kernel-145.trace
+Writing results to ./traces/kernel-146.trace
+Writing results to ./traces/kernel-147.trace
+Writing results to ./traces/kernel-148.trace
+Writing results to ./traces/kernel-149.trace
+Writing results to ./traces/kernel-150.trace
+Writing results to ./traces/kernel-151.trace
+Writing results to ./traces/kernel-152.trace
+Writing results to ./traces/kernel-153.trace
+Writing results to ./traces/kernel-154.trace
+Writing results to ./traces/kernel-155.trace
+Writing results to ./traces/kernel-156.trace
+Writing results to ./traces/kernel-157.trace
+Writing results to ./traces/kernel-158.trace
+Writing results to ./traces/kernel-159.trace
+Writing results to ./traces/kernel-160.trace
+Writing results to ./traces/kernel-161.trace
+Writing results to ./traces/kernel-162.trace
+Writing results to ./traces/kernel-163.trace
+Writing results to ./traces/kernel-164.trace
+Writing results to ./traces/kernel-165.trace
+nnzC = 65536
+Writing results to ./traces/kernel-166.trace
+Processing file ./traces/kernel-1.trace
+Processing file ./traces/kernel-2.trace
+Processing file ./traces/kernel-3.trace
+Processing file ./traces/kernel-4.trace
+Processing file ./traces/kernel-5.trace
+Processing file ./traces/kernel-6.trace
+Processing file ./traces/kernel-7.trace
+Processing file ./traces/kernel-8.trace
+Processing file ./traces/kernel-9.trace
+Processing file ./traces/kernel-10.trace
+Processing file ./traces/kernel-11.trace
+Processing file ./traces/kernel-12.trace
+Processing file ./traces/kernel-13.trace
+Processing file ./traces/kernel-14.trace
+Processing file ./traces/kernel-15.trace
+Processing file ./traces/kernel-16.trace
+Processing file ./traces/kernel-17.trace
+Processing file ./traces/kernel-18.trace
+Processing file ./traces/kernel-19.trace
+Processing file ./traces/kernel-20.trace
+Processing file ./traces/kernel-21.trace
+Processing file ./traces/kernel-22.trace
+Processing file ./traces/kernel-23.trace
+Processing file ./traces/kernel-24.trace
+Processing file ./traces/kernel-25.trace
+Processing file ./traces/kernel-26.trace
+Processing file ./traces/kernel-27.trace
+Processing file ./traces/kernel-28.trace
+Processing file ./traces/kernel-29.trace
+Processing file ./traces/kernel-30.trace
+Processing file ./traces/kernel-31.trace
+Processing file ./traces/kernel-32.trace
+Processing file ./traces/kernel-33.trace
+Processing file ./traces/kernel-34.trace
+Processing file ./traces/kernel-35.trace
+Processing file ./traces/kernel-36.trace
+Processing file ./traces/kernel-37.trace
+Processing file ./traces/kernel-38.trace
+Processing file ./traces/kernel-39.trace
+Processing file ./traces/kernel-40.trace
+Processing file ./traces/kernel-41.trace
+Processing file ./traces/kernel-42.trace
+Processing file ./traces/kernel-43.trace
+Processing file ./traces/kernel-44.trace
+Processing file ./traces/kernel-45.trace
+Processing file ./traces/kernel-46.trace
+Processing file ./traces/kernel-47.trace
+Processing file ./traces/kernel-48.trace
+Processing file ./traces/kernel-49.trace
+Processing file ./traces/kernel-50.trace
+Processing file ./traces/kernel-51.trace
+Processing file ./traces/kernel-52.trace
+Processing file ./traces/kernel-53.trace
+Processing file ./traces/kernel-54.trace
+Processing file ./traces/kernel-55.trace
+Processing file ./traces/kernel-56.trace
+Processing file ./traces/kernel-57.trace
+Processing file ./traces/kernel-58.trace
+Processing file ./traces/kernel-59.trace
+Processing file ./traces/kernel-60.trace
+Processing file ./traces/kernel-61.trace
+Processing file ./traces/kernel-62.trace
+Processing file ./traces/kernel-63.trace
+Processing file ./traces/kernel-64.trace
+Processing file ./traces/kernel-65.trace
+Processing file ./traces/kernel-66.trace
+Processing file ./traces/kernel-67.trace
+Processing file ./traces/kernel-68.trace
+Processing file ./traces/kernel-69.trace
+Processing file ./traces/kernel-70.trace
+Processing file ./traces/kernel-71.trace
+Processing file ./traces/kernel-72.trace
+Processing file ./traces/kernel-73.trace
+Processing file ./traces/kernel-74.trace
+Processing file ./traces/kernel-75.trace
+Processing file ./traces/kernel-76.trace
+Processing file ./traces/kernel-77.trace
+Processing file ./traces/kernel-78.trace
+Processing file ./traces/kernel-79.trace
+Processing file ./traces/kernel-80.trace
+Processing file ./traces/kernel-81.trace
+Processing file ./traces/kernel-82.trace
+Processing file ./traces/kernel-83.trace
+Processing file ./traces/kernel-84.trace
+Processing file ./traces/kernel-85.trace
+Processing file ./traces/kernel-86.trace
+Processing file ./traces/kernel-87.trace
+Processing file ./traces/kernel-88.trace
+Processing file ./traces/kernel-89.trace
+Processing file ./traces/kernel-90.trace
+Processing file ./traces/kernel-91.trace
+Processing file ./traces/kernel-92.trace
+Processing file ./traces/kernel-93.trace
+Processing file ./traces/kernel-94.trace
+Processing file ./traces/kernel-95.trace
+Processing file ./traces/kernel-96.trace
+Processing file ./traces/kernel-97.trace
+Processing file ./traces/kernel-98.trace
+Processing file ./traces/kernel-99.trace
+Processing file ./traces/kernel-100.trace
+Processing file ./traces/kernel-101.trace
+Processing file ./traces/kernel-102.trace
+Processing file ./traces/kernel-103.trace
+Processing file ./traces/kernel-104.trace
+Processing file ./traces/kernel-105.trace
+Processing file ./traces/kernel-106.trace
+Processing file ./traces/kernel-107.trace
+Processing file ./traces/kernel-108.trace
+Processing file ./traces/kernel-109.trace
+Processing file ./traces/kernel-110.trace
+Processing file ./traces/kernel-111.trace
+Processing file ./traces/kernel-112.trace
+Processing file ./traces/kernel-113.trace
+Processing file ./traces/kernel-114.trace
+Processing file ./traces/kernel-115.trace
+Processing file ./traces/kernel-116.trace
+Processing file ./traces/kernel-117.trace
+Processing file ./traces/kernel-118.trace
+Processing file ./traces/kernel-119.trace
+Processing file ./traces/kernel-120.trace
+Processing file ./traces/kernel-121.trace
+Processing file ./traces/kernel-122.trace
+Processing file ./traces/kernel-123.trace
+Processing file ./traces/kernel-124.trace
+Processing file ./traces/kernel-125.trace
+Processing file ./traces/kernel-126.trace
+Processing file ./traces/kernel-127.trace
+Processing file ./traces/kernel-128.trace
+Processing file ./traces/kernel-129.trace
+Processing file ./traces/kernel-130.trace
+Processing file ./traces/kernel-131.trace
+Processing file ./traces/kernel-132.trace
+Processing file ./traces/kernel-133.trace
+Processing file ./traces/kernel-134.trace
+Processing file ./traces/kernel-135.trace
+Processing file ./traces/kernel-136.trace
+Processing file ./traces/kernel-137.trace
+Processing file ./traces/kernel-138.trace
+Processing file ./traces/kernel-139.trace
+Processing file ./traces/kernel-140.trace
+Processing file ./traces/kernel-141.trace
+Processing file ./traces/kernel-142.trace
+Processing file ./traces/kernel-143.trace
+Processing file ./traces/kernel-144.trace
+Processing file ./traces/kernel-145.trace
+Processing file ./traces/kernel-146.trace
+Processing file ./traces/kernel-147.trace
+Processing file ./traces/kernel-148.trace
+Processing file ./traces/kernel-149.trace
+Processing file ./traces/kernel-150.trace
+Processing file ./traces/kernel-151.trace
+Processing file ./traces/kernel-152.trace
+Processing file ./traces/kernel-153.trace
+Processing file ./traces/kernel-154.trace
+Processing file ./traces/kernel-155.trace
+Processing file ./traces/kernel-156.trace
+Processing file ./traces/kernel-157.trace
+Processing file ./traces/kernel-158.trace
+Processing file ./traces/kernel-159.trace
+Processing file ./traces/kernel-160.trace
+Processing file ./traces/kernel-161.trace
+Processing file ./traces/kernel-162.trace
+Processing file ./traces/kernel-163.trace
+Processing file ./traces/kernel-164.trace
+Processing file ./traces/kernel-165.trace
+Processing file ./traces/kernel-166.trace
+Moving back to /home/ctshinn/eec-272-project/prunedense2csrbyP
+Moving into /home/ctshinn/eec-272-project/prunedense2csrbyP/rn50_traces/50/bottleneck_3_block_group1_1_1/
+------------- NVBit (NVidia Binary Instrumentation Tool v1.5.3) Loaded --------------
+NVBit core environment variables (mostly for nvbit-devs):
+            NVDISASM = nvdisasm - override default nvdisasm found in PATH
+            NOBANNER = 0 - if set, does not print this banner
+---------------------------------------------------------------------------------
+         INSTR_BEGIN = 0 - Beginning of the instruction interval where to apply instrumentation
+           INSTR_END = 4294967295 - End of the instruction interval where to apply instrumentation
+    EXCLUDE_PRED_OFF = 1 - Exclude predicated off instruction from count
+DYNAMIC_KERNEL_LIMIT_END = 0 - Limit of the number kernel to be printed, 0 means no limit
+DYNAMIC_KERNEL_LIMIT_START = 0 - start to report kernel from this kernel id, 0 means starts from the beginning, i.e. first kernel
+   ACTIVE_FROM_START = 1 - Start instruction tracing from start or wait for cuProfilerStart and cuProfilerStop. If set to 0, DYNAMIC_KERNEL_LIMIT options have no effect
+        TOOL_VERBOSE = 0 - Enable verbosity inside the tool
+       TOOL_COMPRESS = 1 - Enable traces compression
+     TOOL_TRACE_CORE = 0 - write the core id in the traces
+----------------------------------------------------------------------------------------------------
+example of pruneDense2csrByPercentage 
+prune out 50.0 percentage of A 
+lworkInBytes = 263072 
+Writing results to ./traces/kernel-1.trace
+Writing results to ./traces/kernel-2.trace
+Writing results to ./traces/kernel-3.trace
+Writing results to ./traces/kernel-4.trace
+Writing results to ./traces/kernel-5.trace
+Writing results to ./traces/kernel-6.trace
+Writing results to ./traces/kernel-7.trace
+Writing results to ./traces/kernel-8.trace
+Writing results to ./traces/kernel-9.trace
+Writing results to ./traces/kernel-10.trace
+Writing results to ./traces/kernel-11.trace
+Writing results to ./traces/kernel-12.trace
+Writing results to ./traces/kernel-13.trace
+Writing results to ./traces/kernel-14.trace
+Writing results to ./traces/kernel-15.trace
+Writing results to ./traces/kernel-16.trace
+Writing results to ./traces/kernel-17.trace
+Writing results to ./traces/kernel-18.trace
+Writing results to ./traces/kernel-19.trace
+Writing results to ./traces/kernel-20.trace
+Writing results to ./traces/kernel-21.trace
+Writing results to ./traces/kernel-22.trace
+Writing results to ./traces/kernel-23.trace
+Writing results to ./traces/kernel-24.trace
+Writing results to ./traces/kernel-25.trace
+Writing results to ./traces/kernel-26.trace
+Writing results to ./traces/kernel-27.trace
+Writing results to ./traces/kernel-28.trace
+Writing results to ./traces/kernel-29.trace
+Writing results to ./traces/kernel-30.trace
+Writing results to ./traces/kernel-31.trace
+Writing results to ./traces/kernel-32.trace
+Writing results to ./traces/kernel-33.trace
+Writing results to ./traces/kernel-34.trace
+Writing results to ./traces/kernel-35.trace
+Writing results to ./traces/kernel-36.trace
+Writing results to ./traces/kernel-37.trace
+Writing results to ./traces/kernel-38.trace
+Writing results to ./traces/kernel-39.trace
+Writing results to ./traces/kernel-40.trace
+Writing results to ./traces/kernel-41.trace
+Writing results to ./traces/kernel-42.trace
+Writing results to ./traces/kernel-43.trace
+Writing results to ./traces/kernel-44.trace
+Writing results to ./traces/kernel-45.trace
+Writing results to ./traces/kernel-46.trace
+Writing results to ./traces/kernel-47.trace
+Writing results to ./traces/kernel-48.trace
+Writing results to ./traces/kernel-49.trace
+Writing results to ./traces/kernel-50.trace
+Writing results to ./traces/kernel-51.trace
+Writing results to ./traces/kernel-52.trace
+Writing results to ./traces/kernel-53.trace
+Writing results to ./traces/kernel-54.trace
+Writing results to ./traces/kernel-55.trace
+Writing results to ./traces/kernel-56.trace
+Writing results to ./traces/kernel-57.trace
+Writing results to ./traces/kernel-58.trace
+Writing results to ./traces/kernel-59.trace
+Writing results to ./traces/kernel-60.trace
+Writing results to ./traces/kernel-61.trace
+Writing results to ./traces/kernel-62.trace
+Writing results to ./traces/kernel-63.trace
+Writing results to ./traces/kernel-64.trace
+Writing results to ./traces/kernel-65.trace
+Writing results to ./traces/kernel-66.trace
+Writing results to ./traces/kernel-67.trace
+Writing results to ./traces/kernel-68.trace
+Writing results to ./traces/kernel-69.trace
+Writing results to ./traces/kernel-70.trace
+Writing results to ./traces/kernel-71.trace
+Writing results to ./traces/kernel-72.trace
+Writing results to ./traces/kernel-73.trace
+Writing results to ./traces/kernel-74.trace
+Writing results to ./traces/kernel-75.trace
+Writing results to ./traces/kernel-76.trace
+Writing results to ./traces/kernel-77.trace
+Writing results to ./traces/kernel-78.trace
+Writing results to ./traces/kernel-79.trace
+Writing results to ./traces/kernel-80.trace
+Writing results to ./traces/kernel-81.trace
+Writing results to ./traces/kernel-82.trace
+Writing results to ./traces/kernel-83.trace
+Writing results to ./traces/kernel-84.trace
+Writing results to ./traces/kernel-85.trace
+Writing results to ./traces/kernel-86.trace
+Writing results to ./traces/kernel-87.trace
+Writing results to ./traces/kernel-88.trace
+Writing results to ./traces/kernel-89.trace
+Writing results to ./traces/kernel-90.trace
+Writing results to ./traces/kernel-91.trace
+Writing results to ./traces/kernel-92.trace
+Writing results to ./traces/kernel-93.trace
+Writing results to ./traces/kernel-94.trace
+Writing results to ./traces/kernel-95.trace
+Writing results to ./traces/kernel-96.trace
+Writing results to ./traces/kernel-97.trace
+Writing results to ./traces/kernel-98.trace
+Writing results to ./traces/kernel-99.trace
+Writing results to ./traces/kernel-100.trace
+Writing results to ./traces/kernel-101.trace
+Writing results to ./traces/kernel-102.trace
+Writing results to ./traces/kernel-103.trace
+Writing results to ./traces/kernel-104.trace
+Writing results to ./traces/kernel-105.trace
+Writing results to ./traces/kernel-106.trace
+Writing results to ./traces/kernel-107.trace
+Writing results to ./traces/kernel-108.trace
+Writing results to ./traces/kernel-109.trace
+Writing results to ./traces/kernel-110.trace
+Writing results to ./traces/kernel-111.trace
+Writing results to ./traces/kernel-112.trace
+Writing results to ./traces/kernel-113.trace
+Writing results to ./traces/kernel-114.trace
+Writing results to ./traces/kernel-115.trace
+Writing results to ./traces/kernel-116.trace
+Writing results to ./traces/kernel-117.trace
+Writing results to ./traces/kernel-118.trace
+Writing results to ./traces/kernel-119.trace
+Writing results to ./traces/kernel-120.trace
+Writing results to ./traces/kernel-121.trace
+Writing results to ./traces/kernel-122.trace
+Writing results to ./traces/kernel-123.trace
+Writing results to ./traces/kernel-124.trace
+Writing results to ./traces/kernel-125.trace
+Writing results to ./traces/kernel-126.trace
+Writing results to ./traces/kernel-127.trace
+Writing results to ./traces/kernel-128.trace
+Writing results to ./traces/kernel-129.trace
+Writing results to ./traces/kernel-130.trace
+Writing results to ./traces/kernel-131.trace
+Writing results to ./traces/kernel-132.trace
+Writing results to ./traces/kernel-133.trace
+Writing results to ./traces/kernel-134.trace
+Writing results to ./traces/kernel-135.trace
+Writing results to ./traces/kernel-136.trace
+Writing results to ./traces/kernel-137.trace
+Writing results to ./traces/kernel-138.trace
+Writing results to ./traces/kernel-139.trace
+Writing results to ./traces/kernel-140.trace
+Writing results to ./traces/kernel-141.trace
+Writing results to ./traces/kernel-142.trace
+Writing results to ./traces/kernel-143.trace
+Writing results to ./traces/kernel-144.trace
+Writing results to ./traces/kernel-145.trace
+Writing results to ./traces/kernel-146.trace
+Writing results to ./traces/kernel-147.trace
+Writing results to ./traces/kernel-148.trace
+Writing results to ./traces/kernel-149.trace
+Writing results to ./traces/kernel-150.trace
+Writing results to ./traces/kernel-151.trace
+Writing results to ./traces/kernel-152.trace
+Writing results to ./traces/kernel-153.trace
+Writing results to ./traces/kernel-154.trace
+Writing results to ./traces/kernel-155.trace
+Writing results to ./traces/kernel-156.trace
+Writing results to ./traces/kernel-157.trace
+Writing results to ./traces/kernel-158.trace
+Writing results to ./traces/kernel-159.trace
+Writing results to ./traces/kernel-160.trace
+Writing results to ./traces/kernel-161.trace
+Writing results to ./traces/kernel-162.trace
+Writing results to ./traces/kernel-163.trace
+Writing results to ./traces/kernel-164.trace
+Writing results to ./traces/kernel-165.trace
+nnzC = 8192
+Writing results to ./traces/kernel-166.trace
+Processing file ./traces/kernel-1.trace
+Processing file ./traces/kernel-2.trace
+Processing file ./traces/kernel-3.trace
+Processing file ./traces/kernel-4.trace
+Processing file ./traces/kernel-5.trace
+Processing file ./traces/kernel-6.trace
+Processing file ./traces/kernel-7.trace
+Processing file ./traces/kernel-8.trace
+Processing file ./traces/kernel-9.trace
+Processing file ./traces/kernel-10.trace
+Processing file ./traces/kernel-11.trace
+Processing file ./traces/kernel-12.trace
+Processing file ./traces/kernel-13.trace
+Processing file ./traces/kernel-14.trace
+Processing file ./traces/kernel-15.trace
+Processing file ./traces/kernel-16.trace
+Processing file ./traces/kernel-17.trace
+Processing file ./traces/kernel-18.trace
+Processing file ./traces/kernel-19.trace
+Processing file ./traces/kernel-20.trace
+Processing file ./traces/kernel-21.trace
+Processing file ./traces/kernel-22.trace
+Processing file ./traces/kernel-23.trace
+Processing file ./traces/kernel-24.trace
+Processing file ./traces/kernel-25.trace
+Processing file ./traces/kernel-26.trace
+Processing file ./traces/kernel-27.trace
+Processing file ./traces/kernel-28.trace
+Processing file ./traces/kernel-29.trace
+Processing file ./traces/kernel-30.trace
+Processing file ./traces/kernel-31.trace
+Processing file ./traces/kernel-32.trace
+Processing file ./traces/kernel-33.trace
+Processing file ./traces/kernel-34.trace
+Processing file ./traces/kernel-35.trace
+Processing file ./traces/kernel-36.trace
+Processing file ./traces/kernel-37.trace
+Processing file ./traces/kernel-38.trace
+Processing file ./traces/kernel-39.trace
+Processing file ./traces/kernel-40.trace
+Processing file ./traces/kernel-41.trace
+Processing file ./traces/kernel-42.trace
+Processing file ./traces/kernel-43.trace
+Processing file ./traces/kernel-44.trace
+Processing file ./traces/kernel-45.trace
+Processing file ./traces/kernel-46.trace
+Processing file ./traces/kernel-47.trace
+Processing file ./traces/kernel-48.trace
+Processing file ./traces/kernel-49.trace
+Processing file ./traces/kernel-50.trace
+Processing file ./traces/kernel-51.trace
+Processing file ./traces/kernel-52.trace
+Processing file ./traces/kernel-53.trace
+Processing file ./traces/kernel-54.trace
+Processing file ./traces/kernel-55.trace
+Processing file ./traces/kernel-56.trace
+Processing file ./traces/kernel-57.trace
+Processing file ./traces/kernel-58.trace
+Processing file ./traces/kernel-59.trace
+Processing file ./traces/kernel-60.trace
+Processing file ./traces/kernel-61.trace
+Processing file ./traces/kernel-62.trace
+Processing file ./traces/kernel-63.trace
+Processing file ./traces/kernel-64.trace
+Processing file ./traces/kernel-65.trace
+Processing file ./traces/kernel-66.trace
+Processing file ./traces/kernel-67.trace
+Processing file ./traces/kernel-68.trace
+Processing file ./traces/kernel-69.trace
+Processing file ./traces/kernel-70.trace
+Processing file ./traces/kernel-71.trace
+Processing file ./traces/kernel-72.trace
+Processing file ./traces/kernel-73.trace
+Processing file ./traces/kernel-74.trace
+Processing file ./traces/kernel-75.trace
+Processing file ./traces/kernel-76.trace
+Processing file ./traces/kernel-77.trace
+Processing file ./traces/kernel-78.trace
+Processing file ./traces/kernel-79.trace
+Processing file ./traces/kernel-80.trace
+Processing file ./traces/kernel-81.trace
+Processing file ./traces/kernel-82.trace
+Processing file ./traces/kernel-83.trace
+Processing file ./traces/kernel-84.trace
+Processing file ./traces/kernel-85.trace
+Processing file ./traces/kernel-86.trace
+Processing file ./traces/kernel-87.trace
+Processing file ./traces/kernel-88.trace
+Processing file ./traces/kernel-89.trace
+Processing file ./traces/kernel-90.trace
+Processing file ./traces/kernel-91.trace
+Processing file ./traces/kernel-92.trace
+Processing file ./traces/kernel-93.trace
+Processing file ./traces/kernel-94.trace
+Processing file ./traces/kernel-95.trace
+Processing file ./traces/kernel-96.trace
+Processing file ./traces/kernel-97.trace
+Processing file ./traces/kernel-98.trace
+Processing file ./traces/kernel-99.trace
+Processing file ./traces/kernel-100.trace
+Processing file ./traces/kernel-101.trace
+Processing file ./traces/kernel-102.trace
+Processing file ./traces/kernel-103.trace
+Processing file ./traces/kernel-104.trace
+Processing file ./traces/kernel-105.trace
+Processing file ./traces/kernel-106.trace
+Processing file ./traces/kernel-107.trace
+Processing file ./traces/kernel-108.trace
+Processing file ./traces/kernel-109.trace
+Processing file ./traces/kernel-110.trace
+Processing file ./traces/kernel-111.trace
+Processing file ./traces/kernel-112.trace
+Processing file ./traces/kernel-113.trace
+Processing file ./traces/kernel-114.trace
+Processing file ./traces/kernel-115.trace
+Processing file ./traces/kernel-116.trace
+Processing file ./traces/kernel-117.trace
+Processing file ./traces/kernel-118.trace
+Processing file ./traces/kernel-119.trace
+Processing file ./traces/kernel-120.trace
+Processing file ./traces/kernel-121.trace
+Processing file ./traces/kernel-122.trace
+Processing file ./traces/kernel-123.trace
+Processing file ./traces/kernel-124.trace
+Processing file ./traces/kernel-125.trace
+Processing file ./traces/kernel-126.trace
+Processing file ./traces/kernel-127.trace
+Processing file ./traces/kernel-128.trace
+Processing file ./traces/kernel-129.trace
+Processing file ./traces/kernel-130.trace
+Processing file ./traces/kernel-131.trace
+Processing file ./traces/kernel-132.trace
+Processing file ./traces/kernel-133.trace
+Processing file ./traces/kernel-134.trace
+Processing file ./traces/kernel-135.trace
+Processing file ./traces/kernel-136.trace
+Processing file ./traces/kernel-137.trace
+Processing file ./traces/kernel-138.trace
+Processing file ./traces/kernel-139.trace
+Processing file ./traces/kernel-140.trace
+Processing file ./traces/kernel-141.trace
+Processing file ./traces/kernel-142.trace
+Processing file ./traces/kernel-143.trace
+Processing file ./traces/kernel-144.trace
+Processing file ./traces/kernel-145.trace
+Processing file ./traces/kernel-146.trace
+Processing file ./traces/kernel-147.trace
+Processing file ./traces/kernel-148.trace
+Processing file ./traces/kernel-149.trace
+Processing file ./traces/kernel-150.trace
+Processing file ./traces/kernel-151.trace
+Processing file ./traces/kernel-152.trace
+Processing file ./traces/kernel-153.trace
+Processing file ./traces/kernel-154.trace
+Processing file ./traces/kernel-155.trace
+Processing file ./traces/kernel-156.trace
+Processing file ./traces/kernel-157.trace
+Processing file ./traces/kernel-158.trace
+Processing file ./traces/kernel-159.trace
+Processing file ./traces/kernel-160.trace
+Processing file ./traces/kernel-161.trace
+Processing file ./traces/kernel-162.trace
+Processing file ./traces/kernel-163.trace
+Processing file ./traces/kernel-164.trace
+Processing file ./traces/kernel-165.trace
+Processing file ./traces/kernel-166.trace
+Moving back to /home/ctshinn/eec-272-project/prunedense2csrbyP
+Moving into /home/ctshinn/eec-272-project/prunedense2csrbyP/rn50_traces/50/bottleneck_projection_block_group_projection_block_group3/
+------------- NVBit (NVidia Binary Instrumentation Tool v1.5.3) Loaded --------------
+NVBit core environment variables (mostly for nvbit-devs):
+            NVDISASM = nvdisasm - override default nvdisasm found in PATH
+            NOBANNER = 0 - if set, does not print this banner
+---------------------------------------------------------------------------------
+         INSTR_BEGIN = 0 - Beginning of the instruction interval where to apply instrumentation
+           INSTR_END = 4294967295 - End of the instruction interval where to apply instrumentation
+    EXCLUDE_PRED_OFF = 1 - Exclude predicated off instruction from count
+DYNAMIC_KERNEL_LIMIT_END = 0 - Limit of the number kernel to be printed, 0 means no limit
+DYNAMIC_KERNEL_LIMIT_START = 0 - start to report kernel from this kernel id, 0 means starts from the beginning, i.e. first kernel
+   ACTIVE_FROM_START = 1 - Start instruction tracing from start or wait for cuProfilerStart and cuProfilerStop. If set to 0, DYNAMIC_KERNEL_LIMIT options have no effect
+        TOOL_VERBOSE = 0 - Enable verbosity inside the tool
+       TOOL_COMPRESS = 1 - Enable traces compression
+     TOOL_TRACE_CORE = 0 - write the core id in the traces
+----------------------------------------------------------------------------------------------------
+example of pruneDense2csrByPercentage 
+prune out 50.0 percentage of A 
+lworkInBytes = 8393504 
+Writing results to ./traces/kernel-1.trace
+Writing results to ./traces/kernel-2.trace
+Writing results to ./traces/kernel-3.trace
+Writing results to ./traces/kernel-4.trace
+Writing results to ./traces/kernel-5.trace
+Writing results to ./traces/kernel-6.trace
+Writing results to ./traces/kernel-7.trace
+Writing results to ./traces/kernel-8.trace
+Writing results to ./traces/kernel-9.trace
+Writing results to ./traces/kernel-10.trace
+Writing results to ./traces/kernel-11.trace
+Writing results to ./traces/kernel-12.trace
+Writing results to ./traces/kernel-13.trace
+Writing results to ./traces/kernel-14.trace
+Writing results to ./traces/kernel-15.trace
+Writing results to ./traces/kernel-16.trace
+Writing results to ./traces/kernel-17.trace
+Writing results to ./traces/kernel-18.trace
+Writing results to ./traces/kernel-19.trace
+Writing results to ./traces/kernel-20.trace
+Writing results to ./traces/kernel-21.trace
+Writing results to ./traces/kernel-22.trace
+Writing results to ./traces/kernel-23.trace
+Writing results to ./traces/kernel-24.trace
+Writing results to ./traces/kernel-25.trace
+Writing results to ./traces/kernel-26.trace
+Writing results to ./traces/kernel-27.trace
+Writing results to ./traces/kernel-28.trace
+Writing results to ./traces/kernel-29.trace
+Writing results to ./traces/kernel-30.trace
+Writing results to ./traces/kernel-31.trace
+Writing results to ./traces/kernel-32.trace
+Writing results to ./traces/kernel-33.trace
+Writing results to ./traces/kernel-34.trace
+Writing results to ./traces/kernel-35.trace
+Writing results to ./traces/kernel-36.trace
+Writing results to ./traces/kernel-37.trace
+Writing results to ./traces/kernel-38.trace
+Writing results to ./traces/kernel-39.trace
+Writing results to ./traces/kernel-40.trace
+Writing results to ./traces/kernel-41.trace
+Writing results to ./traces/kernel-42.trace
+Writing results to ./traces/kernel-43.trace
+Writing results to ./traces/kernel-44.trace
+Writing results to ./traces/kernel-45.trace
+Writing results to ./traces/kernel-46.trace
+Writing results to ./traces/kernel-47.trace
+Writing results to ./traces/kernel-48.trace
+Writing results to ./traces/kernel-49.trace
+Writing results to ./traces/kernel-50.trace
+Writing results to ./traces/kernel-51.trace
+Writing results to ./traces/kernel-52.trace
+Writing results to ./traces/kernel-53.trace
+Writing results to ./traces/kernel-54.trace
+Writing results to ./traces/kernel-55.trace
+Writing results to ./traces/kernel-56.trace
+Writing results to ./traces/kernel-57.trace
+Writing results to ./traces/kernel-58.trace
+Writing results to ./traces/kernel-59.trace
+Writing results to ./traces/kernel-60.trace
+Writing results to ./traces/kernel-61.trace
+Writing results to ./traces/kernel-62.trace
+Writing results to ./traces/kernel-63.trace
+Writing results to ./traces/kernel-64.trace
+Writing results to ./traces/kernel-65.trace
+Writing results to ./traces/kernel-66.trace
+Writing results to ./traces/kernel-67.trace
+Writing results to ./traces/kernel-68.trace
+Writing results to ./traces/kernel-69.trace
+Writing results to ./traces/kernel-70.trace
+Writing results to ./traces/kernel-71.trace
+Writing results to ./traces/kernel-72.trace
+Writing results to ./traces/kernel-73.trace
+Writing results to ./traces/kernel-74.trace
+Writing results to ./traces/kernel-75.trace
+Writing results to ./traces/kernel-76.trace
+Writing results to ./traces/kernel-77.trace
+Writing results to ./traces/kernel-78.trace
+Writing results to ./traces/kernel-79.trace
+Writing results to ./traces/kernel-80.trace
+Writing results to ./traces/kernel-81.trace
+Writing results to ./traces/kernel-82.trace
+Writing results to ./traces/kernel-83.trace
+Writing results to ./traces/kernel-84.trace
+Writing results to ./traces/kernel-85.trace
+Writing results to ./traces/kernel-86.trace
+Writing results to ./traces/kernel-87.trace
+Writing results to ./traces/kernel-88.trace
+Writing results to ./traces/kernel-89.trace
+Writing results to ./traces/kernel-90.trace
+Writing results to ./traces/kernel-91.trace
+Writing results to ./traces/kernel-92.trace
+Writing results to ./traces/kernel-93.trace
+Writing results to ./traces/kernel-94.trace
+Writing results to ./traces/kernel-95.trace
+Writing results to ./traces/kernel-96.trace
+Writing results to ./traces/kernel-97.trace
+Writing results to ./traces/kernel-98.trace
+Writing results to ./traces/kernel-99.trace
+Writing results to ./traces/kernel-100.trace
+Writing results to ./traces/kernel-101.trace
+Writing results to ./traces/kernel-102.trace
+Writing results to ./traces/kernel-103.trace
+Writing results to ./traces/kernel-104.trace
+Writing results to ./traces/kernel-105.trace
+Writing results to ./traces/kernel-106.trace
+Writing results to ./traces/kernel-107.trace
+Writing results to ./traces/kernel-108.trace
+Writing results to ./traces/kernel-109.trace
+Writing results to ./traces/kernel-110.trace
+Writing results to ./traces/kernel-111.trace
+Writing results to ./traces/kernel-112.trace
+Writing results to ./traces/kernel-113.trace
+Writing results to ./traces/kernel-114.trace
+Writing results to ./traces/kernel-115.trace
+Writing results to ./traces/kernel-116.trace
+Writing results to ./traces/kernel-117.trace
+Writing results to ./traces/kernel-118.trace
+Writing results to ./traces/kernel-119.trace
+Writing results to ./traces/kernel-120.trace
+Writing results to ./traces/kernel-121.trace
+Writing results to ./traces/kernel-122.trace
+Writing results to ./traces/kernel-123.trace
+Writing results to ./traces/kernel-124.trace
+Writing results to ./traces/kernel-125.trace
+Writing results to ./traces/kernel-126.trace
+Writing results to ./traces/kernel-127.trace
+Writing results to ./traces/kernel-128.trace
+Writing results to ./traces/kernel-129.trace
+Writing results to ./traces/kernel-130.trace
+Writing results to ./traces/kernel-131.trace
+Writing results to ./traces/kernel-132.trace
+Writing results to ./traces/kernel-133.trace
+Writing results to ./traces/kernel-134.trace
+Writing results to ./traces/kernel-135.trace
+Writing results to ./traces/kernel-136.trace
+Writing results to ./traces/kernel-137.trace
+Writing results to ./traces/kernel-138.trace
+Writing results to ./traces/kernel-139.trace
+Writing results to ./traces/kernel-140.trace
+Writing results to ./traces/kernel-141.trace
+Writing results to ./traces/kernel-142.trace
+Writing results to ./traces/kernel-143.trace
+Writing results to ./traces/kernel-144.trace
+Writing results to ./traces/kernel-145.trace
+Writing results to ./traces/kernel-146.trace
+Writing results to ./traces/kernel-147.trace
+Writing results to ./traces/kernel-148.trace
+Writing results to ./traces/kernel-149.trace
+Writing results to ./traces/kernel-150.trace
+Writing results to ./traces/kernel-151.trace
+Writing results to ./traces/kernel-152.trace
+Writing results to ./traces/kernel-153.trace
+Writing results to ./traces/kernel-154.trace
+Writing results to ./traces/kernel-155.trace
+Writing results to ./traces/kernel-156.trace
+Writing results to ./traces/kernel-157.trace
+Writing results to ./traces/kernel-158.trace
+Writing results to ./traces/kernel-159.trace
+Writing results to ./traces/kernel-160.trace
+Writing results to ./traces/kernel-161.trace
+Writing results to ./traces/kernel-162.trace
+Writing results to ./traces/kernel-163.trace
+Writing results to ./traces/kernel-164.trace
+Writing results to ./traces/kernel-165.trace
+nnzC = 262144
+Writing results to ./traces/kernel-166.trace
+Processing file ./traces/kernel-1.trace
+Processing file ./traces/kernel-2.trace
+Processing file ./traces/kernel-3.trace
+Processing file ./traces/kernel-4.trace
+Processing file ./traces/kernel-5.trace
+Processing file ./traces/kernel-6.trace
+Processing file ./traces/kernel-7.trace
+Processing file ./traces/kernel-8.trace
+Processing file ./traces/kernel-9.trace
+Processing file ./traces/kernel-10.trace
+Processing file ./traces/kernel-11.trace
+Processing file ./traces/kernel-12.trace
+Processing file ./traces/kernel-13.trace
+Processing file ./traces/kernel-14.trace
+Processing file ./traces/kernel-15.trace
+Processing file ./traces/kernel-16.trace
+Processing file ./traces/kernel-17.trace
+Processing file ./traces/kernel-18.trace
+Processing file ./traces/kernel-19.trace
+Processing file ./traces/kernel-20.trace
+Processing file ./traces/kernel-21.trace
+Processing file ./traces/kernel-22.trace
+Processing file ./traces/kernel-23.trace
+Processing file ./traces/kernel-24.trace
+Processing file ./traces/kernel-25.trace
+Processing file ./traces/kernel-26.trace
+Processing file ./traces/kernel-27.trace
+Processing file ./traces/kernel-28.trace
+Processing file ./traces/kernel-29.trace
+Processing file ./traces/kernel-30.trace
+Processing file ./traces/kernel-31.trace
+Processing file ./traces/kernel-32.trace
+Processing file ./traces/kernel-33.trace
+Processing file ./traces/kernel-34.trace
+Processing file ./traces/kernel-35.trace
+Processing file ./traces/kernel-36.trace
+Processing file ./traces/kernel-37.trace
+Processing file ./traces/kernel-38.trace
+Processing file ./traces/kernel-39.trace
+Processing file ./traces/kernel-40.trace
+Processing file ./traces/kernel-41.trace
+Processing file ./traces/kernel-42.trace
+Processing file ./traces/kernel-43.trace
+Processing file ./traces/kernel-44.trace
+Processing file ./traces/kernel-45.trace
+Processing file ./traces/kernel-46.trace
+Processing file ./traces/kernel-47.trace
+Processing file ./traces/kernel-48.trace
+Processing file ./traces/kernel-49.trace
+Processing file ./traces/kernel-50.trace
+Processing file ./traces/kernel-51.trace
+Processing file ./traces/kernel-52.trace
+Processing file ./traces/kernel-53.trace
+Processing file ./traces/kernel-54.trace
+Processing file ./traces/kernel-55.trace
+Processing file ./traces/kernel-56.trace
+Processing file ./traces/kernel-57.trace
+Processing file ./traces/kernel-58.trace
+Processing file ./traces/kernel-59.trace
+Processing file ./traces/kernel-60.trace
+Processing file ./traces/kernel-61.trace
+Processing file ./traces/kernel-62.trace
+Processing file ./traces/kernel-63.trace
+Processing file ./traces/kernel-64.trace
+Processing file ./traces/kernel-65.trace
+Processing file ./traces/kernel-66.trace
+Processing file ./traces/kernel-67.trace
+Processing file ./traces/kernel-68.trace
+Processing file ./traces/kernel-69.trace
+Processing file ./traces/kernel-70.trace
+Processing file ./traces/kernel-71.trace
+Processing file ./traces/kernel-72.trace
+Processing file ./traces/kernel-73.trace
+Processing file ./traces/kernel-74.trace
+Processing file ./traces/kernel-75.trace
+Processing file ./traces/kernel-76.trace
+Processing file ./traces/kernel-77.trace
+Processing file ./traces/kernel-78.trace
+Processing file ./traces/kernel-79.trace
+Processing file ./traces/kernel-80.trace
+Processing file ./traces/kernel-81.trace
+Processing file ./traces/kernel-82.trace
+Processing file ./traces/kernel-83.trace
+Processing file ./traces/kernel-84.trace
+Processing file ./traces/kernel-85.trace
+Processing file ./traces/kernel-86.trace
+Processing file ./traces/kernel-87.trace
+Processing file ./traces/kernel-88.trace
+Processing file ./traces/kernel-89.trace
+Processing file ./traces/kernel-90.trace
+Processing file ./traces/kernel-91.trace
+Processing file ./traces/kernel-92.trace
+Processing file ./traces/kernel-93.trace
+Processing file ./traces/kernel-94.trace
+Processing file ./traces/kernel-95.trace
+Processing file ./traces/kernel-96.trace
+Processing file ./traces/kernel-97.trace
+Processing file ./traces/kernel-98.trace
+Processing file ./traces/kernel-99.trace
+Processing file ./traces/kernel-100.trace
+Processing file ./traces/kernel-101.trace
+Processing file ./traces/kernel-102.trace
+Processing file ./traces/kernel-103.trace
+Processing file ./traces/kernel-104.trace
+Processing file ./traces/kernel-105.trace
+Processing file ./traces/kernel-106.trace
+Processing file ./traces/kernel-107.trace
+Processing file ./traces/kernel-108.trace
+Processing file ./traces/kernel-109.trace
+Processing file ./traces/kernel-110.trace
+Processing file ./traces/kernel-111.trace
+Processing file ./traces/kernel-112.trace
+Processing file ./traces/kernel-113.trace
+Processing file ./traces/kernel-114.trace
+Processing file ./traces/kernel-115.trace
+Processing file ./traces/kernel-116.trace
+Processing file ./traces/kernel-117.trace
+Processing file ./traces/kernel-118.trace
+Processing file ./traces/kernel-119.trace
+Processing file ./traces/kernel-120.trace
+Processing file ./traces/kernel-121.trace
+Processing file ./traces/kernel-122.trace
+Processing file ./traces/kernel-123.trace
+Processing file ./traces/kernel-124.trace
+Processing file ./traces/kernel-125.trace
+Processing file ./traces/kernel-126.trace
+Processing file ./traces/kernel-127.trace
+Processing file ./traces/kernel-128.trace
+Processing file ./traces/kernel-129.trace
+Processing file ./traces/kernel-130.trace
+Processing file ./traces/kernel-131.trace
+Processing file ./traces/kernel-132.trace
+Processing file ./traces/kernel-133.trace
+Processing file ./traces/kernel-134.trace
+Processing file ./traces/kernel-135.trace
+Processing file ./traces/kernel-136.trace
+Processing file ./traces/kernel-137.trace
+Processing file ./traces/kernel-138.trace
+Processing file ./traces/kernel-139.trace
+Processing file ./traces/kernel-140.trace
+Processing file ./traces/kernel-141.trace
+Processing file ./traces/kernel-142.trace
+Processing file ./traces/kernel-143.trace
+Processing file ./traces/kernel-144.trace
+Processing file ./traces/kernel-145.trace
+Processing file ./traces/kernel-146.trace
+Processing file ./traces/kernel-147.trace
+Processing file ./traces/kernel-148.trace
+Processing file ./traces/kernel-149.trace
+Processing file ./traces/kernel-150.trace
+Processing file ./traces/kernel-151.trace
+Processing file ./traces/kernel-152.trace
+Processing file ./traces/kernel-153.trace
+Processing file ./traces/kernel-154.trace
+Processing file ./traces/kernel-155.trace
+Processing file ./traces/kernel-156.trace
+Processing file ./traces/kernel-157.trace
+Processing file ./traces/kernel-158.trace
+Processing file ./traces/kernel-159.trace
+Processing file ./traces/kernel-160.trace
+Processing file ./traces/kernel-161.trace
+Processing file ./traces/kernel-162.trace
+Processing file ./traces/kernel-163.trace
+Processing file ./traces/kernel-164.trace
+Processing file ./traces/kernel-165.trace
+Processing file ./traces/kernel-166.trace
+Moving back to /home/ctshinn/eec-272-project/prunedense2csrbyP
+Moving into /home/ctshinn/eec-272-project/prunedense2csrbyP/rn50_traces/80/bottleneck_1_block_group2_1_1/
+------------- NVBit (NVidia Binary Instrumentation Tool v1.5.3) Loaded --------------
+NVBit core environment variables (mostly for nvbit-devs):
+            NVDISASM = nvdisasm - override default nvdisasm found in PATH
+            NOBANNER = 0 - if set, does not print this banner
+---------------------------------------------------------------------------------
+         INSTR_BEGIN = 0 - Beginning of the instruction interval where to apply instrumentation
+           INSTR_END = 4294967295 - End of the instruction interval where to apply instrumentation
+    EXCLUDE_PRED_OFF = 1 - Exclude predicated off instruction from count
+DYNAMIC_KERNEL_LIMIT_END = 0 - Limit of the number kernel to be printed, 0 means no limit
+DYNAMIC_KERNEL_LIMIT_START = 0 - start to report kernel from this kernel id, 0 means starts from the beginning, i.e. first kernel
+   ACTIVE_FROM_START = 1 - Start instruction tracing from start or wait for cuProfilerStart and cuProfilerStop. If set to 0, DYNAMIC_KERNEL_LIMIT options have no effect
+        TOOL_VERBOSE = 0 - Enable verbosity inside the tool
+       TOOL_COMPRESS = 1 - Enable traces compression
+     TOOL_TRACE_CORE = 0 - write the core id in the traces
+----------------------------------------------------------------------------------------------------
+example of pruneDense2csrByPercentage 
+prune out 80.0 percentage of A 
+lworkInBytes = 1049888 
+Writing results to ./traces/kernel-1.trace
+Writing results to ./traces/kernel-2.trace
+Writing results to ./traces/kernel-3.trace
+Writing results to ./traces/kernel-4.trace
+Writing results to ./traces/kernel-5.trace
+Writing results to ./traces/kernel-6.trace
+Writing results to ./traces/kernel-7.trace
+Writing results to ./traces/kernel-8.trace
+Writing results to ./traces/kernel-9.trace
+Writing results to ./traces/kernel-10.trace
+Writing results to ./traces/kernel-11.trace
+Writing results to ./traces/kernel-12.trace
+Writing results to ./traces/kernel-13.trace
+Writing results to ./traces/kernel-14.trace
+Writing results to ./traces/kernel-15.trace
+Writing results to ./traces/kernel-16.trace
+Writing results to ./traces/kernel-17.trace
+Writing results to ./traces/kernel-18.trace
+Writing results to ./traces/kernel-19.trace
+Writing results to ./traces/kernel-20.trace
+Writing results to ./traces/kernel-21.trace
+Writing results to ./traces/kernel-22.trace
+Writing results to ./traces/kernel-23.trace
+Writing results to ./traces/kernel-24.trace
+Writing results to ./traces/kernel-25.trace
+Writing results to ./traces/kernel-26.trace
+Writing results to ./traces/kernel-27.trace
+Writing results to ./traces/kernel-28.trace
+Writing results to ./traces/kernel-29.trace
+Writing results to ./traces/kernel-30.trace
+Writing results to ./traces/kernel-31.trace
+Writing results to ./traces/kernel-32.trace
+Writing results to ./traces/kernel-33.trace
+Writing results to ./traces/kernel-34.trace
+Writing results to ./traces/kernel-35.trace
+Writing results to ./traces/kernel-36.trace
+Writing results to ./traces/kernel-37.trace
+Writing results to ./traces/kernel-38.trace
+Writing results to ./traces/kernel-39.trace
+Writing results to ./traces/kernel-40.trace
+Writing results to ./traces/kernel-41.trace
+Writing results to ./traces/kernel-42.trace
+Writing results to ./traces/kernel-43.trace
+Writing results to ./traces/kernel-44.trace
+Writing results to ./traces/kernel-45.trace
+Writing results to ./traces/kernel-46.trace
+Writing results to ./traces/kernel-47.trace
+Writing results to ./traces/kernel-48.trace
+Writing results to ./traces/kernel-49.trace
+Writing results to ./traces/kernel-50.trace
+Writing results to ./traces/kernel-51.trace
+Writing results to ./traces/kernel-52.trace
+Writing results to ./traces/kernel-53.trace
+Writing results to ./traces/kernel-54.trace
+Writing results to ./traces/kernel-55.trace
+Writing results to ./traces/kernel-56.trace
+Writing results to ./traces/kernel-57.trace
+Writing results to ./traces/kernel-58.trace
+Writing results to ./traces/kernel-59.trace
+Writing results to ./traces/kernel-60.trace
+Writing results to ./traces/kernel-61.trace
+Writing results to ./traces/kernel-62.trace
+Writing results to ./traces/kernel-63.trace
+Writing results to ./traces/kernel-64.trace
+Writing results to ./traces/kernel-65.trace
+Writing results to ./traces/kernel-66.trace
+Writing results to ./traces/kernel-67.trace
+Writing results to ./traces/kernel-68.trace
+Writing results to ./traces/kernel-69.trace
+Writing results to ./traces/kernel-70.trace
+Writing results to ./traces/kernel-71.trace
+Writing results to ./traces/kernel-72.trace
+Writing results to ./traces/kernel-73.trace
+Writing results to ./traces/kernel-74.trace
+Writing results to ./traces/kernel-75.trace
+Writing results to ./traces/kernel-76.trace
+Writing results to ./traces/kernel-77.trace
+Writing results to ./traces/kernel-78.trace
+Writing results to ./traces/kernel-79.trace
+Writing results to ./traces/kernel-80.trace
+Writing results to ./traces/kernel-81.trace
+Writing results to ./traces/kernel-82.trace
+Writing results to ./traces/kernel-83.trace
+Writing results to ./traces/kernel-84.trace
+Writing results to ./traces/kernel-85.trace
+Writing results to ./traces/kernel-86.trace
+Writing results to ./traces/kernel-87.trace
+Writing results to ./traces/kernel-88.trace
+Writing results to ./traces/kernel-89.trace
+Writing results to ./traces/kernel-90.trace
+Writing results to ./traces/kernel-91.trace
+Writing results to ./traces/kernel-92.trace
+Writing results to ./traces/kernel-93.trace
+Writing results to ./traces/kernel-94.trace
+Writing results to ./traces/kernel-95.trace
+Writing results to ./traces/kernel-96.trace
+Writing results to ./traces/kernel-97.trace
+Writing results to ./traces/kernel-98.trace
+Writing results to ./traces/kernel-99.trace
+Writing results to ./traces/kernel-100.trace
+Writing results to ./traces/kernel-101.trace
+Writing results to ./traces/kernel-102.trace
+Writing results to ./traces/kernel-103.trace
+Writing results to ./traces/kernel-104.trace
+Writing results to ./traces/kernel-105.trace
+Writing results to ./traces/kernel-106.trace
+Writing results to ./traces/kernel-107.trace
+Writing results to ./traces/kernel-108.trace
+Writing results to ./traces/kernel-109.trace
+Writing results to ./traces/kernel-110.trace
+Writing results to ./traces/kernel-111.trace
+Writing results to ./traces/kernel-112.trace
+Writing results to ./traces/kernel-113.trace
+Writing results to ./traces/kernel-114.trace
+Writing results to ./traces/kernel-115.trace
+Writing results to ./traces/kernel-116.trace
+Writing results to ./traces/kernel-117.trace
+Writing results to ./traces/kernel-118.trace
+Writing results to ./traces/kernel-119.trace
+Writing results to ./traces/kernel-120.trace
+Writing results to ./traces/kernel-121.trace
+Writing results to ./traces/kernel-122.trace
+Writing results to ./traces/kernel-123.trace
+Writing results to ./traces/kernel-124.trace
+Writing results to ./traces/kernel-125.trace
+Writing results to ./traces/kernel-126.trace
+Writing results to ./traces/kernel-127.trace
+Writing results to ./traces/kernel-128.trace
+Writing results to ./traces/kernel-129.trace
+Writing results to ./traces/kernel-130.trace
+Writing results to ./traces/kernel-131.trace
+Writing results to ./traces/kernel-132.trace
+Writing results to ./traces/kernel-133.trace
+Writing results to ./traces/kernel-134.trace
+Writing results to ./traces/kernel-135.trace
+Writing results to ./traces/kernel-136.trace
+Writing results to ./traces/kernel-137.trace
+Writing results to ./traces/kernel-138.trace
+Writing results to ./traces/kernel-139.trace
+Writing results to ./traces/kernel-140.trace
+Writing results to ./traces/kernel-141.trace
+Writing results to ./traces/kernel-142.trace
+Writing results to ./traces/kernel-143.trace
+Writing results to ./traces/kernel-144.trace
+Writing results to ./traces/kernel-145.trace
+Writing results to ./traces/kernel-146.trace
+Writing results to ./traces/kernel-147.trace
+Writing results to ./traces/kernel-148.trace
+Writing results to ./traces/kernel-149.trace
+Writing results to ./traces/kernel-150.trace
+Writing results to ./traces/kernel-151.trace
+Writing results to ./traces/kernel-152.trace
+Writing results to ./traces/kernel-153.trace
+Writing results to ./traces/kernel-154.trace
+Writing results to ./traces/kernel-155.trace
+Writing results to ./traces/kernel-156.trace
+Writing results to ./traces/kernel-157.trace
+Writing results to ./traces/kernel-158.trace
+Writing results to ./traces/kernel-159.trace
+Writing results to ./traces/kernel-160.trace
+Writing results to ./traces/kernel-161.trace
+Writing results to ./traces/kernel-162.trace
+Writing results to ./traces/kernel-163.trace
+Writing results to ./traces/kernel-164.trace
+Writing results to ./traces/kernel-165.trace
+nnzC = 13107
+Writing results to ./traces/kernel-166.trace
+Processing file ./traces/kernel-1.trace
+Processing file ./traces/kernel-2.trace
+Processing file ./traces/kernel-3.trace
+Processing file ./traces/kernel-4.trace
+Processing file ./traces/kernel-5.trace
+Processing file ./traces/kernel-6.trace
+Processing file ./traces/kernel-7.trace
+Processing file ./traces/kernel-8.trace
+Processing file ./traces/kernel-9.trace
+Processing file ./traces/kernel-10.trace
+Processing file ./traces/kernel-11.trace
+Processing file ./traces/kernel-12.trace
+Processing file ./traces/kernel-13.trace
+Processing file ./traces/kernel-14.trace
+Processing file ./traces/kernel-15.trace
+Processing file ./traces/kernel-16.trace
+Processing file ./traces/kernel-17.trace
+Processing file ./traces/kernel-18.trace
+Processing file ./traces/kernel-19.trace
+Processing file ./traces/kernel-20.trace
+Processing file ./traces/kernel-21.trace
+Processing file ./traces/kernel-22.trace
+Processing file ./traces/kernel-23.trace
+Processing file ./traces/kernel-24.trace
+Processing file ./traces/kernel-25.trace
+Processing file ./traces/kernel-26.trace
+Processing file ./traces/kernel-27.trace
+Processing file ./traces/kernel-28.trace
+Processing file ./traces/kernel-29.trace
+Processing file ./traces/kernel-30.trace
+Processing file ./traces/kernel-31.trace
+Processing file ./traces/kernel-32.trace
+Processing file ./traces/kernel-33.trace
+Processing file ./traces/kernel-34.trace
+Processing file ./traces/kernel-35.trace
+Processing file ./traces/kernel-36.trace
+Processing file ./traces/kernel-37.trace
+Processing file ./traces/kernel-38.trace
+Processing file ./traces/kernel-39.trace
+Processing file ./traces/kernel-40.trace
+Processing file ./traces/kernel-41.trace
+Processing file ./traces/kernel-42.trace
+Processing file ./traces/kernel-43.trace
+Processing file ./traces/kernel-44.trace
+Processing file ./traces/kernel-45.trace
+Processing file ./traces/kernel-46.trace
+Processing file ./traces/kernel-47.trace
+Processing file ./traces/kernel-48.trace
+Processing file ./traces/kernel-49.trace
+Processing file ./traces/kernel-50.trace
+Processing file ./traces/kernel-51.trace
+Processing file ./traces/kernel-52.trace
+Processing file ./traces/kernel-53.trace
+Processing file ./traces/kernel-54.trace
+Processing file ./traces/kernel-55.trace
+Processing file ./traces/kernel-56.trace
+Processing file ./traces/kernel-57.trace
+Processing file ./traces/kernel-58.trace
+Processing file ./traces/kernel-59.trace
+Processing file ./traces/kernel-60.trace
+Processing file ./traces/kernel-61.trace
+Processing file ./traces/kernel-62.trace
+Processing file ./traces/kernel-63.trace
+Processing file ./traces/kernel-64.trace
+Processing file ./traces/kernel-65.trace
+Processing file ./traces/kernel-66.trace
+Processing file ./traces/kernel-67.trace
+Processing file ./traces/kernel-68.trace
+Processing file ./traces/kernel-69.trace
+Processing file ./traces/kernel-70.trace
+Processing file ./traces/kernel-71.trace
+Processing file ./traces/kernel-72.trace
+Processing file ./traces/kernel-73.trace
+Processing file ./traces/kernel-74.trace
+Processing file ./traces/kernel-75.trace
+Processing file ./traces/kernel-76.trace
+Processing file ./traces/kernel-77.trace
+Processing file ./traces/kernel-78.trace
+Processing file ./traces/kernel-79.trace
+Processing file ./traces/kernel-80.trace
+Processing file ./traces/kernel-81.trace
+Processing file ./traces/kernel-82.trace
+Processing file ./traces/kernel-83.trace
+Processing file ./traces/kernel-84.trace
+Processing file ./traces/kernel-85.trace
+Processing file ./traces/kernel-86.trace
+Processing file ./traces/kernel-87.trace
+Processing file ./traces/kernel-88.trace
+Processing file ./traces/kernel-89.trace
+Processing file ./traces/kernel-90.trace
+Processing file ./traces/kernel-91.trace
+Processing file ./traces/kernel-92.trace
+Processing file ./traces/kernel-93.trace
+Processing file ./traces/kernel-94.trace
+Processing file ./traces/kernel-95.trace
+Processing file ./traces/kernel-96.trace
+Processing file ./traces/kernel-97.trace
+Processing file ./traces/kernel-98.trace
+Processing file ./traces/kernel-99.trace
+Processing file ./traces/kernel-100.trace
+Processing file ./traces/kernel-101.trace
+Processing file ./traces/kernel-102.trace
+Processing file ./traces/kernel-103.trace
+Processing file ./traces/kernel-104.trace
+Processing file ./traces/kernel-105.trace
+Processing file ./traces/kernel-106.trace
+Processing file ./traces/kernel-107.trace
+Processing file ./traces/kernel-108.trace
+Processing file ./traces/kernel-109.trace
+Processing file ./traces/kernel-110.trace
+Processing file ./traces/kernel-111.trace
+Processing file ./traces/kernel-112.trace
+Processing file ./traces/kernel-113.trace
+Processing file ./traces/kernel-114.trace
+Processing file ./traces/kernel-115.trace
+Processing file ./traces/kernel-116.trace
+Processing file ./traces/kernel-117.trace
+Processing file ./traces/kernel-118.trace
+Processing file ./traces/kernel-119.trace
+Processing file ./traces/kernel-120.trace
+Processing file ./traces/kernel-121.trace
+Processing file ./traces/kernel-122.trace
+Processing file ./traces/kernel-123.trace
+Processing file ./traces/kernel-124.trace
+Processing file ./traces/kernel-125.trace
+Processing file ./traces/kernel-126.trace
+Processing file ./traces/kernel-127.trace
+Processing file ./traces/kernel-128.trace
+Processing file ./traces/kernel-129.trace
+Processing file ./traces/kernel-130.trace
+Processing file ./traces/kernel-131.trace
+Processing file ./traces/kernel-132.trace
+Processing file ./traces/kernel-133.trace
+Processing file ./traces/kernel-134.trace
+Processing file ./traces/kernel-135.trace
+Processing file ./traces/kernel-136.trace
+Processing file ./traces/kernel-137.trace
+Processing file ./traces/kernel-138.trace
+Processing file ./traces/kernel-139.trace
+Processing file ./traces/kernel-140.trace
+Processing file ./traces/kernel-141.trace
+Processing file ./traces/kernel-142.trace
+Processing file ./traces/kernel-143.trace
+Processing file ./traces/kernel-144.trace
+Processing file ./traces/kernel-145.trace
+Processing file ./traces/kernel-146.trace
+Processing file ./traces/kernel-147.trace
+Processing file ./traces/kernel-148.trace
+Processing file ./traces/kernel-149.trace
+Processing file ./traces/kernel-150.trace
+Processing file ./traces/kernel-151.trace
+Processing file ./traces/kernel-152.trace
+Processing file ./traces/kernel-153.trace
+Processing file ./traces/kernel-154.trace
+Processing file ./traces/kernel-155.trace
+Processing file ./traces/kernel-156.trace
+Processing file ./traces/kernel-157.trace
+Processing file ./traces/kernel-158.trace
+Processing file ./traces/kernel-159.trace
+Processing file ./traces/kernel-160.trace
+Processing file ./traces/kernel-161.trace
+Processing file ./traces/kernel-162.trace
+Processing file ./traces/kernel-163.trace
+Processing file ./traces/kernel-164.trace
+Processing file ./traces/kernel-165.trace
+Processing file ./traces/kernel-166.trace
+Moving back to /home/ctshinn/eec-272-project/prunedense2csrbyP
+Moving into /home/ctshinn/eec-272-project/prunedense2csrbyP/rn50_traces/80/bottleneck_1_block_group_projection_block_group3/
+------------- NVBit (NVidia Binary Instrumentation Tool v1.5.3) Loaded --------------
+NVBit core environment variables (mostly for nvbit-devs):
+            NVDISASM = nvdisasm - override default nvdisasm found in PATH
+            NOBANNER = 0 - if set, does not print this banner
+---------------------------------------------------------------------------------
+         INSTR_BEGIN = 0 - Beginning of the instruction interval where to apply instrumentation
+           INSTR_END = 4294967295 - End of the instruction interval where to apply instrumentation
+    EXCLUDE_PRED_OFF = 1 - Exclude predicated off instruction from count
+DYNAMIC_KERNEL_LIMIT_END = 0 - Limit of the number kernel to be printed, 0 means no limit
+DYNAMIC_KERNEL_LIMIT_START = 0 - start to report kernel from this kernel id, 0 means starts from the beginning, i.e. first kernel
+   ACTIVE_FROM_START = 1 - Start instruction tracing from start or wait for cuProfilerStart and cuProfilerStop. If set to 0, DYNAMIC_KERNEL_LIMIT options have no effect
+        TOOL_VERBOSE = 0 - Enable verbosity inside the tool
+       TOOL_COMPRESS = 1 - Enable traces compression
+     TOOL_TRACE_CORE = 0 - write the core id in the traces
+----------------------------------------------------------------------------------------------------
+example of pruneDense2csrByPercentage 
+prune out 80.0 percentage of A 
+lworkInBytes = 2098976 
+Writing results to ./traces/kernel-1.trace
+Writing results to ./traces/kernel-2.trace
+Writing results to ./traces/kernel-3.trace
+Writing results to ./traces/kernel-4.trace
+Writing results to ./traces/kernel-5.trace
+Writing results to ./traces/kernel-6.trace
+Writing results to ./traces/kernel-7.trace
+Writing results to ./traces/kernel-8.trace
+Writing results to ./traces/kernel-9.trace
+Writing results to ./traces/kernel-10.trace
+Writing results to ./traces/kernel-11.trace
+Writing results to ./traces/kernel-12.trace
+Writing results to ./traces/kernel-13.trace
+Writing results to ./traces/kernel-14.trace
+Writing results to ./traces/kernel-15.trace
+Writing results to ./traces/kernel-16.trace
+Writing results to ./traces/kernel-17.trace
+Writing results to ./traces/kernel-18.trace
+Writing results to ./traces/kernel-19.trace
+Writing results to ./traces/kernel-20.trace
+Writing results to ./traces/kernel-21.trace
+Writing results to ./traces/kernel-22.trace
+Writing results to ./traces/kernel-23.trace
+Writing results to ./traces/kernel-24.trace
+Writing results to ./traces/kernel-25.trace
+Writing results to ./traces/kernel-26.trace
+Writing results to ./traces/kernel-27.trace
+Writing results to ./traces/kernel-28.trace
+Writing results to ./traces/kernel-29.trace
+Writing results to ./traces/kernel-30.trace
+Writing results to ./traces/kernel-31.trace
+Writing results to ./traces/kernel-32.trace
+Writing results to ./traces/kernel-33.trace
+Writing results to ./traces/kernel-34.trace
+Writing results to ./traces/kernel-35.trace
+Writing results to ./traces/kernel-36.trace
+Writing results to ./traces/kernel-37.trace
+Writing results to ./traces/kernel-38.trace
+Writing results to ./traces/kernel-39.trace
+Writing results to ./traces/kernel-40.trace
+Writing results to ./traces/kernel-41.trace
+Writing results to ./traces/kernel-42.trace
+Writing results to ./traces/kernel-43.trace
+Writing results to ./traces/kernel-44.trace
+Writing results to ./traces/kernel-45.trace
+Writing results to ./traces/kernel-46.trace
+Writing results to ./traces/kernel-47.trace
+Writing results to ./traces/kernel-48.trace
+Writing results to ./traces/kernel-49.trace
+Writing results to ./traces/kernel-50.trace
+Writing results to ./traces/kernel-51.trace
+Writing results to ./traces/kernel-52.trace
+Writing results to ./traces/kernel-53.trace
+Writing results to ./traces/kernel-54.trace
+Writing results to ./traces/kernel-55.trace
+Writing results to ./traces/kernel-56.trace
+Writing results to ./traces/kernel-57.trace
+Writing results to ./traces/kernel-58.trace
+Writing results to ./traces/kernel-59.trace
+Writing results to ./traces/kernel-60.trace
+Writing results to ./traces/kernel-61.trace
+Writing results to ./traces/kernel-62.trace
+Writing results to ./traces/kernel-63.trace
+Writing results to ./traces/kernel-64.trace
+Writing results to ./traces/kernel-65.trace
+Writing results to ./traces/kernel-66.trace
+Writing results to ./traces/kernel-67.trace
+Writing results to ./traces/kernel-68.trace
+Writing results to ./traces/kernel-69.trace
+Writing results to ./traces/kernel-70.trace
+Writing results to ./traces/kernel-71.trace
+Writing results to ./traces/kernel-72.trace
+Writing results to ./traces/kernel-73.trace
+Writing results to ./traces/kernel-74.trace
+Writing results to ./traces/kernel-75.trace
+Writing results to ./traces/kernel-76.trace
+Writing results to ./traces/kernel-77.trace
+Writing results to ./traces/kernel-78.trace
+Writing results to ./traces/kernel-79.trace
+Writing results to ./traces/kernel-80.trace
+Writing results to ./traces/kernel-81.trace
+Writing results to ./traces/kernel-82.trace
+Writing results to ./traces/kernel-83.trace
+Writing results to ./traces/kernel-84.trace
+Writing results to ./traces/kernel-85.trace
+Writing results to ./traces/kernel-86.trace
+Writing results to ./traces/kernel-87.trace
+Writing results to ./traces/kernel-88.trace
+Writing results to ./traces/kernel-89.trace
+Writing results to ./traces/kernel-90.trace
+Writing results to ./traces/kernel-91.trace
+Writing results to ./traces/kernel-92.trace
+Writing results to ./traces/kernel-93.trace
+Writing results to ./traces/kernel-94.trace
+Writing results to ./traces/kernel-95.trace
+Writing results to ./traces/kernel-96.trace
+Writing results to ./traces/kernel-97.trace
+Writing results to ./traces/kernel-98.trace
+Writing results to ./traces/kernel-99.trace
+Writing results to ./traces/kernel-100.trace
+Writing results to ./traces/kernel-101.trace
+Writing results to ./traces/kernel-102.trace
+Writing results to ./traces/kernel-103.trace
+Writing results to ./traces/kernel-104.trace
+Writing results to ./traces/kernel-105.trace
+Writing results to ./traces/kernel-106.trace
+Writing results to ./traces/kernel-107.trace
+Writing results to ./traces/kernel-108.trace
+Writing results to ./traces/kernel-109.trace
+Writing results to ./traces/kernel-110.trace
+Writing results to ./traces/kernel-111.trace
+Writing results to ./traces/kernel-112.trace
+Writing results to ./traces/kernel-113.trace
+Writing results to ./traces/kernel-114.trace
+Writing results to ./traces/kernel-115.trace
+Writing results to ./traces/kernel-116.trace
+Writing results to ./traces/kernel-117.trace
+Writing results to ./traces/kernel-118.trace
+Writing results to ./traces/kernel-119.trace
+Writing results to ./traces/kernel-120.trace
+Writing results to ./traces/kernel-121.trace
+Writing results to ./traces/kernel-122.trace
+Writing results to ./traces/kernel-123.trace
+Writing results to ./traces/kernel-124.trace
+Writing results to ./traces/kernel-125.trace
+Writing results to ./traces/kernel-126.trace
+Writing results to ./traces/kernel-127.trace
+Writing results to ./traces/kernel-128.trace
+Writing results to ./traces/kernel-129.trace
+Writing results to ./traces/kernel-130.trace
+Writing results to ./traces/kernel-131.trace
+Writing results to ./traces/kernel-132.trace
+Writing results to ./traces/kernel-133.trace
+Writing results to ./traces/kernel-134.trace
+Writing results to ./traces/kernel-135.trace
+Writing results to ./traces/kernel-136.trace
+Writing results to ./traces/kernel-137.trace
+Writing results to ./traces/kernel-138.trace
+Writing results to ./traces/kernel-139.trace
+Writing results to ./traces/kernel-140.trace
+Writing results to ./traces/kernel-141.trace
+Writing results to ./traces/kernel-142.trace
+Writing results to ./traces/kernel-143.trace
+Writing results to ./traces/kernel-144.trace
+Writing results to ./traces/kernel-145.trace
+Writing results to ./traces/kernel-146.trace
+Writing results to ./traces/kernel-147.trace
+Writing results to ./traces/kernel-148.trace
+Writing results to ./traces/kernel-149.trace
+Writing results to ./traces/kernel-150.trace
+Writing results to ./traces/kernel-151.trace
+Writing results to ./traces/kernel-152.trace
+Writing results to ./traces/kernel-153.trace
+Writing results to ./traces/kernel-154.trace
+Writing results to ./traces/kernel-155.trace
+Writing results to ./traces/kernel-156.trace
+Writing results to ./traces/kernel-157.trace
+Writing results to ./traces/kernel-158.trace
+Writing results to ./traces/kernel-159.trace
+Writing results to ./traces/kernel-160.trace
+Writing results to ./traces/kernel-161.trace
+Writing results to ./traces/kernel-162.trace
+Writing results to ./traces/kernel-163.trace
+Writing results to ./traces/kernel-164.trace
+Writing results to ./traces/kernel-165.trace
+nnzC = 26214
+Writing results to ./traces/kernel-166.trace
+Processing file ./traces/kernel-1.trace
+Processing file ./traces/kernel-2.trace
+Processing file ./traces/kernel-3.trace
+Processing file ./traces/kernel-4.trace
+Processing file ./traces/kernel-5.trace
+Processing file ./traces/kernel-6.trace
+Processing file ./traces/kernel-7.trace
+Processing file ./traces/kernel-8.trace
+Processing file ./traces/kernel-9.trace
+Processing file ./traces/kernel-10.trace
+Processing file ./traces/kernel-11.trace
+Processing file ./traces/kernel-12.trace
+Processing file ./traces/kernel-13.trace
+Processing file ./traces/kernel-14.trace
+Processing file ./traces/kernel-15.trace
+Processing file ./traces/kernel-16.trace
+Processing file ./traces/kernel-17.trace
+Processing file ./traces/kernel-18.trace
+Processing file ./traces/kernel-19.trace
+Processing file ./traces/kernel-20.trace
+Processing file ./traces/kernel-21.trace
+Processing file ./traces/kernel-22.trace
+Processing file ./traces/kernel-23.trace
+Processing file ./traces/kernel-24.trace
+Processing file ./traces/kernel-25.trace
+Processing file ./traces/kernel-26.trace
+Processing file ./traces/kernel-27.trace
+Processing file ./traces/kernel-28.trace
+Processing file ./traces/kernel-29.trace
+Processing file ./traces/kernel-30.trace
+Processing file ./traces/kernel-31.trace
+Processing file ./traces/kernel-32.trace
+Processing file ./traces/kernel-33.trace
+Processing file ./traces/kernel-34.trace
+Processing file ./traces/kernel-35.trace
+Processing file ./traces/kernel-36.trace
+Processing file ./traces/kernel-37.trace
+Processing file ./traces/kernel-38.trace
+Processing file ./traces/kernel-39.trace
+Processing file ./traces/kernel-40.trace
+Processing file ./traces/kernel-41.trace
+Processing file ./traces/kernel-42.trace
+Processing file ./traces/kernel-43.trace
+Processing file ./traces/kernel-44.trace
+Processing file ./traces/kernel-45.trace
+Processing file ./traces/kernel-46.trace
+Processing file ./traces/kernel-47.trace
+Processing file ./traces/kernel-48.trace
+Processing file ./traces/kernel-49.trace
+Processing file ./traces/kernel-50.trace
+Processing file ./traces/kernel-51.trace
+Processing file ./traces/kernel-52.trace
+Processing file ./traces/kernel-53.trace
+Processing file ./traces/kernel-54.trace
+Processing file ./traces/kernel-55.trace
+Processing file ./traces/kernel-56.trace
+Processing file ./traces/kernel-57.trace
+Processing file ./traces/kernel-58.trace
+Processing file ./traces/kernel-59.trace
+Processing file ./traces/kernel-60.trace
+Processing file ./traces/kernel-61.trace
+Processing file ./traces/kernel-62.trace
+Processing file ./traces/kernel-63.trace
+Processing file ./traces/kernel-64.trace
+Processing file ./traces/kernel-65.trace
+Processing file ./traces/kernel-66.trace
+Processing file ./traces/kernel-67.trace
+Processing file ./traces/kernel-68.trace
+Processing file ./traces/kernel-69.trace
+Processing file ./traces/kernel-70.trace
+Processing file ./traces/kernel-71.trace
+Processing file ./traces/kernel-72.trace
+Processing file ./traces/kernel-73.trace
+Processing file ./traces/kernel-74.trace
+Processing file ./traces/kernel-75.trace
+Processing file ./traces/kernel-76.trace
+Processing file ./traces/kernel-77.trace
+Processing file ./traces/kernel-78.trace
+Processing file ./traces/kernel-79.trace
+Processing file ./traces/kernel-80.trace
+Processing file ./traces/kernel-81.trace
+Processing file ./traces/kernel-82.trace
+Processing file ./traces/kernel-83.trace
+Processing file ./traces/kernel-84.trace
+Processing file ./traces/kernel-85.trace
+Processing file ./traces/kernel-86.trace
+Processing file ./traces/kernel-87.trace
+Processing file ./traces/kernel-88.trace
+Processing file ./traces/kernel-89.trace
+Processing file ./traces/kernel-90.trace
+Processing file ./traces/kernel-91.trace
+Processing file ./traces/kernel-92.trace
+Processing file ./traces/kernel-93.trace
+Processing file ./traces/kernel-94.trace
+Processing file ./traces/kernel-95.trace
+Processing file ./traces/kernel-96.trace
+Processing file ./traces/kernel-97.trace
+Processing file ./traces/kernel-98.trace
+Processing file ./traces/kernel-99.trace
+Processing file ./traces/kernel-100.trace
+Processing file ./traces/kernel-101.trace
+Processing file ./traces/kernel-102.trace
+Processing file ./traces/kernel-103.trace
+Processing file ./traces/kernel-104.trace
+Processing file ./traces/kernel-105.trace
+Processing file ./traces/kernel-106.trace
+Processing file ./traces/kernel-107.trace
+Processing file ./traces/kernel-108.trace
+Processing file ./traces/kernel-109.trace
+Processing file ./traces/kernel-110.trace
+Processing file ./traces/kernel-111.trace
+Processing file ./traces/kernel-112.trace
+Processing file ./traces/kernel-113.trace
+Processing file ./traces/kernel-114.trace
+Processing file ./traces/kernel-115.trace
+Processing file ./traces/kernel-116.trace
+Processing file ./traces/kernel-117.trace
+Processing file ./traces/kernel-118.trace
+Processing file ./traces/kernel-119.trace
+Processing file ./traces/kernel-120.trace
+Processing file ./traces/kernel-121.trace
+Processing file ./traces/kernel-122.trace
+Processing file ./traces/kernel-123.trace
+Processing file ./traces/kernel-124.trace
+Processing file ./traces/kernel-125.trace
+Processing file ./traces/kernel-126.trace
+Processing file ./traces/kernel-127.trace
+Processing file ./traces/kernel-128.trace
+Processing file ./traces/kernel-129.trace
+Processing file ./traces/kernel-130.trace
+Processing file ./traces/kernel-131.trace
+Processing file ./traces/kernel-132.trace
+Processing file ./traces/kernel-133.trace
+Processing file ./traces/kernel-134.trace
+Processing file ./traces/kernel-135.trace
+Processing file ./traces/kernel-136.trace
+Processing file ./traces/kernel-137.trace
+Processing file ./traces/kernel-138.trace
+Processing file ./traces/kernel-139.trace
+Processing file ./traces/kernel-140.trace
+Processing file ./traces/kernel-141.trace
+Processing file ./traces/kernel-142.trace
+Processing file ./traces/kernel-143.trace
+Processing file ./traces/kernel-144.trace
+Processing file ./traces/kernel-145.trace
+Processing file ./traces/kernel-146.trace
+Processing file ./traces/kernel-147.trace
+Processing file ./traces/kernel-148.trace
+Processing file ./traces/kernel-149.trace
+Processing file ./traces/kernel-150.trace
+Processing file ./traces/kernel-151.trace
+Processing file ./traces/kernel-152.trace
+Processing file ./traces/kernel-153.trace
+Processing file ./traces/kernel-154.trace
+Processing file ./traces/kernel-155.trace
+Processing file ./traces/kernel-156.trace
+Processing file ./traces/kernel-157.trace
+Processing file ./traces/kernel-158.trace
+Processing file ./traces/kernel-159.trace
+Processing file ./traces/kernel-160.trace
+Processing file ./traces/kernel-161.trace
+Processing file ./traces/kernel-162.trace
+Processing file ./traces/kernel-163.trace
+Processing file ./traces/kernel-164.trace
+Processing file ./traces/kernel-165.trace
+Processing file ./traces/kernel-166.trace
+Moving back to /home/ctshinn/eec-272-project/prunedense2csrbyP
+Moving into /home/ctshinn/eec-272-project/prunedense2csrbyP/rn50_traces/80/bottleneck_3_block_group1_1_1/
+------------- NVBit (NVidia Binary Instrumentation Tool v1.5.3) Loaded --------------
+NVBit core environment variables (mostly for nvbit-devs):
+            NVDISASM = nvdisasm - override default nvdisasm found in PATH
+            NOBANNER = 0 - if set, does not print this banner
+---------------------------------------------------------------------------------
+         INSTR_BEGIN = 0 - Beginning of the instruction interval where to apply instrumentation
+           INSTR_END = 4294967295 - End of the instruction interval where to apply instrumentation
+    EXCLUDE_PRED_OFF = 1 - Exclude predicated off instruction from count
+DYNAMIC_KERNEL_LIMIT_END = 0 - Limit of the number kernel to be printed, 0 means no limit
+DYNAMIC_KERNEL_LIMIT_START = 0 - start to report kernel from this kernel id, 0 means starts from the beginning, i.e. first kernel
+   ACTIVE_FROM_START = 1 - Start instruction tracing from start or wait for cuProfilerStart and cuProfilerStop. If set to 0, DYNAMIC_KERNEL_LIMIT options have no effect
+        TOOL_VERBOSE = 0 - Enable verbosity inside the tool
+       TOOL_COMPRESS = 1 - Enable traces compression
+     TOOL_TRACE_CORE = 0 - write the core id in the traces
+----------------------------------------------------------------------------------------------------
+example of pruneDense2csrByPercentage 
+prune out 80.0 percentage of A 
+lworkInBytes = 263072 
+Writing results to ./traces/kernel-1.trace
+Writing results to ./traces/kernel-2.trace
+Writing results to ./traces/kernel-3.trace
+Writing results to ./traces/kernel-4.trace
+Writing results to ./traces/kernel-5.trace
+Writing results to ./traces/kernel-6.trace
+Writing results to ./traces/kernel-7.trace
+Writing results to ./traces/kernel-8.trace
+Writing results to ./traces/kernel-9.trace
+Writing results to ./traces/kernel-10.trace
+Writing results to ./traces/kernel-11.trace
+Writing results to ./traces/kernel-12.trace
+Writing results to ./traces/kernel-13.trace
+Writing results to ./traces/kernel-14.trace
+Writing results to ./traces/kernel-15.trace
+Writing results to ./traces/kernel-16.trace
+Writing results to ./traces/kernel-17.trace
+Writing results to ./traces/kernel-18.trace
+Writing results to ./traces/kernel-19.trace
+Writing results to ./traces/kernel-20.trace
+Writing results to ./traces/kernel-21.trace
+Writing results to ./traces/kernel-22.trace
+Writing results to ./traces/kernel-23.trace
+Writing results to ./traces/kernel-24.trace
+Writing results to ./traces/kernel-25.trace
+Writing results to ./traces/kernel-26.trace
+Writing results to ./traces/kernel-27.trace
+Writing results to ./traces/kernel-28.trace
+Writing results to ./traces/kernel-29.trace
+Writing results to ./traces/kernel-30.trace
+Writing results to ./traces/kernel-31.trace
+Writing results to ./traces/kernel-32.trace
+Writing results to ./traces/kernel-33.trace
+Writing results to ./traces/kernel-34.trace
+Writing results to ./traces/kernel-35.trace
+Writing results to ./traces/kernel-36.trace
+Writing results to ./traces/kernel-37.trace
+Writing results to ./traces/kernel-38.trace
+Writing results to ./traces/kernel-39.trace
+Writing results to ./traces/kernel-40.trace
+Writing results to ./traces/kernel-41.trace
+Writing results to ./traces/kernel-42.trace
+Writing results to ./traces/kernel-43.trace
+Writing results to ./traces/kernel-44.trace
+Writing results to ./traces/kernel-45.trace
+Writing results to ./traces/kernel-46.trace
+Writing results to ./traces/kernel-47.trace
+Writing results to ./traces/kernel-48.trace
+Writing results to ./traces/kernel-49.trace
+Writing results to ./traces/kernel-50.trace
+Writing results to ./traces/kernel-51.trace
+Writing results to ./traces/kernel-52.trace
+Writing results to ./traces/kernel-53.trace
+Writing results to ./traces/kernel-54.trace
+Writing results to ./traces/kernel-55.trace
+Writing results to ./traces/kernel-56.trace
+Writing results to ./traces/kernel-57.trace
+Writing results to ./traces/kernel-58.trace
+Writing results to ./traces/kernel-59.trace
+Writing results to ./traces/kernel-60.trace
+Writing results to ./traces/kernel-61.trace
+Writing results to ./traces/kernel-62.trace
+Writing results to ./traces/kernel-63.trace
+Writing results to ./traces/kernel-64.trace
+Writing results to ./traces/kernel-65.trace
+Writing results to ./traces/kernel-66.trace
+Writing results to ./traces/kernel-67.trace
+Writing results to ./traces/kernel-68.trace
+Writing results to ./traces/kernel-69.trace
+Writing results to ./traces/kernel-70.trace
+Writing results to ./traces/kernel-71.trace
+Writing results to ./traces/kernel-72.trace
+Writing results to ./traces/kernel-73.trace
+Writing results to ./traces/kernel-74.trace
+Writing results to ./traces/kernel-75.trace
+Writing results to ./traces/kernel-76.trace
+Writing results to ./traces/kernel-77.trace
+Writing results to ./traces/kernel-78.trace
+Writing results to ./traces/kernel-79.trace
+Writing results to ./traces/kernel-80.trace
+Writing results to ./traces/kernel-81.trace
+Writing results to ./traces/kernel-82.trace
+Writing results to ./traces/kernel-83.trace
+Writing results to ./traces/kernel-84.trace
+Writing results to ./traces/kernel-85.trace
+Writing results to ./traces/kernel-86.trace
+Writing results to ./traces/kernel-87.trace
+Writing results to ./traces/kernel-88.trace
+Writing results to ./traces/kernel-89.trace
+Writing results to ./traces/kernel-90.trace
+Writing results to ./traces/kernel-91.trace
+Writing results to ./traces/kernel-92.trace
+Writing results to ./traces/kernel-93.trace
+Writing results to ./traces/kernel-94.trace
+Writing results to ./traces/kernel-95.trace
+Writing results to ./traces/kernel-96.trace
+Writing results to ./traces/kernel-97.trace
+Writing results to ./traces/kernel-98.trace
+Writing results to ./traces/kernel-99.trace
+Writing results to ./traces/kernel-100.trace
+Writing results to ./traces/kernel-101.trace
+Writing results to ./traces/kernel-102.trace
+Writing results to ./traces/kernel-103.trace
+Writing results to ./traces/kernel-104.trace
+Writing results to ./traces/kernel-105.trace
+Writing results to ./traces/kernel-106.trace
+Writing results to ./traces/kernel-107.trace
+Writing results to ./traces/kernel-108.trace
+Writing results to ./traces/kernel-109.trace
+Writing results to ./traces/kernel-110.trace
+Writing results to ./traces/kernel-111.trace
+Writing results to ./traces/kernel-112.trace
+Writing results to ./traces/kernel-113.trace
+Writing results to ./traces/kernel-114.trace
+Writing results to ./traces/kernel-115.trace
+Writing results to ./traces/kernel-116.trace
+Writing results to ./traces/kernel-117.trace
+Writing results to ./traces/kernel-118.trace
+Writing results to ./traces/kernel-119.trace
+Writing results to ./traces/kernel-120.trace
+Writing results to ./traces/kernel-121.trace
+Writing results to ./traces/kernel-122.trace
+Writing results to ./traces/kernel-123.trace
+Writing results to ./traces/kernel-124.trace
+Writing results to ./traces/kernel-125.trace
+Writing results to ./traces/kernel-126.trace
+Writing results to ./traces/kernel-127.trace
+Writing results to ./traces/kernel-128.trace
+Writing results to ./traces/kernel-129.trace
+Writing results to ./traces/kernel-130.trace
+Writing results to ./traces/kernel-131.trace
+Writing results to ./traces/kernel-132.trace
+Writing results to ./traces/kernel-133.trace
+Writing results to ./traces/kernel-134.trace
+Writing results to ./traces/kernel-135.trace
+Writing results to ./traces/kernel-136.trace
+Writing results to ./traces/kernel-137.trace
+Writing results to ./traces/kernel-138.trace
+Writing results to ./traces/kernel-139.trace
+Writing results to ./traces/kernel-140.trace
+Writing results to ./traces/kernel-141.trace
+Writing results to ./traces/kernel-142.trace
+Writing results to ./traces/kernel-143.trace
+Writing results to ./traces/kernel-144.trace
+Writing results to ./traces/kernel-145.trace
+Writing results to ./traces/kernel-146.trace
+Writing results to ./traces/kernel-147.trace
+Writing results to ./traces/kernel-148.trace
+Writing results to ./traces/kernel-149.trace
+Writing results to ./traces/kernel-150.trace
+Writing results to ./traces/kernel-151.trace
+Writing results to ./traces/kernel-152.trace
+Writing results to ./traces/kernel-153.trace
+Writing results to ./traces/kernel-154.trace
+Writing results to ./traces/kernel-155.trace
+Writing results to ./traces/kernel-156.trace
+Writing results to ./traces/kernel-157.trace
+Writing results to ./traces/kernel-158.trace
+Writing results to ./traces/kernel-159.trace
+Writing results to ./traces/kernel-160.trace
+Writing results to ./traces/kernel-161.trace
+Writing results to ./traces/kernel-162.trace
+Writing results to ./traces/kernel-163.trace
+Writing results to ./traces/kernel-164.trace
+Writing results to ./traces/kernel-165.trace
+nnzC = 3276
+Writing results to ./traces/kernel-166.trace
+Processing file ./traces/kernel-1.trace
+Processing file ./traces/kernel-2.trace
+Processing file ./traces/kernel-3.trace
+Processing file ./traces/kernel-4.trace
+Processing file ./traces/kernel-5.trace
+Processing file ./traces/kernel-6.trace
+Processing file ./traces/kernel-7.trace
+Processing file ./traces/kernel-8.trace
+Processing file ./traces/kernel-9.trace
+Processing file ./traces/kernel-10.trace
+Processing file ./traces/kernel-11.trace
+Processing file ./traces/kernel-12.trace
+Processing file ./traces/kernel-13.trace
+Processing file ./traces/kernel-14.trace
+Processing file ./traces/kernel-15.trace
+Processing file ./traces/kernel-16.trace
+Processing file ./traces/kernel-17.trace
+Processing file ./traces/kernel-18.trace
+Processing file ./traces/kernel-19.trace
+Processing file ./traces/kernel-20.trace
+Processing file ./traces/kernel-21.trace
+Processing file ./traces/kernel-22.trace
+Processing file ./traces/kernel-23.trace
+Processing file ./traces/kernel-24.trace
+Processing file ./traces/kernel-25.trace
+Processing file ./traces/kernel-26.trace
+Processing file ./traces/kernel-27.trace
+Processing file ./traces/kernel-28.trace
+Processing file ./traces/kernel-29.trace
+Processing file ./traces/kernel-30.trace
+Processing file ./traces/kernel-31.trace
+Processing file ./traces/kernel-32.trace
+Processing file ./traces/kernel-33.trace
+Processing file ./traces/kernel-34.trace
+Processing file ./traces/kernel-35.trace
+Processing file ./traces/kernel-36.trace
+Processing file ./traces/kernel-37.trace
+Processing file ./traces/kernel-38.trace
+Processing file ./traces/kernel-39.trace
+Processing file ./traces/kernel-40.trace
+Processing file ./traces/kernel-41.trace
+Processing file ./traces/kernel-42.trace
+Processing file ./traces/kernel-43.trace
+Processing file ./traces/kernel-44.trace
+Processing file ./traces/kernel-45.trace
+Processing file ./traces/kernel-46.trace
+Processing file ./traces/kernel-47.trace
+Processing file ./traces/kernel-48.trace
+Processing file ./traces/kernel-49.trace
+Processing file ./traces/kernel-50.trace
+Processing file ./traces/kernel-51.trace
+Processing file ./traces/kernel-52.trace
+Processing file ./traces/kernel-53.trace
+Processing file ./traces/kernel-54.trace
+Processing file ./traces/kernel-55.trace
+Processing file ./traces/kernel-56.trace
+Processing file ./traces/kernel-57.trace
+Processing file ./traces/kernel-58.trace
+Processing file ./traces/kernel-59.trace
+Processing file ./traces/kernel-60.trace
+Processing file ./traces/kernel-61.trace
+Processing file ./traces/kernel-62.trace
+Processing file ./traces/kernel-63.trace
+Processing file ./traces/kernel-64.trace
+Processing file ./traces/kernel-65.trace
+Processing file ./traces/kernel-66.trace
+Processing file ./traces/kernel-67.trace
+Processing file ./traces/kernel-68.trace
+Processing file ./traces/kernel-69.trace
+Processing file ./traces/kernel-70.trace
+Processing file ./traces/kernel-71.trace
+Processing file ./traces/kernel-72.trace
+Processing file ./traces/kernel-73.trace
+Processing file ./traces/kernel-74.trace
+Processing file ./traces/kernel-75.trace
+Processing file ./traces/kernel-76.trace
+Processing file ./traces/kernel-77.trace
+Processing file ./traces/kernel-78.trace
+Processing file ./traces/kernel-79.trace
+Processing file ./traces/kernel-80.trace
+Processing file ./traces/kernel-81.trace
+Processing file ./traces/kernel-82.trace
+Processing file ./traces/kernel-83.trace
+Processing file ./traces/kernel-84.trace
+Processing file ./traces/kernel-85.trace
+Processing file ./traces/kernel-86.trace
+Processing file ./traces/kernel-87.trace
+Processing file ./traces/kernel-88.trace
+Processing file ./traces/kernel-89.trace
+Processing file ./traces/kernel-90.trace
+Processing file ./traces/kernel-91.trace
+Processing file ./traces/kernel-92.trace
+Processing file ./traces/kernel-93.trace
+Processing file ./traces/kernel-94.trace
+Processing file ./traces/kernel-95.trace
+Processing file ./traces/kernel-96.trace
+Processing file ./traces/kernel-97.trace
+Processing file ./traces/kernel-98.trace
+Processing file ./traces/kernel-99.trace
+Processing file ./traces/kernel-100.trace
+Processing file ./traces/kernel-101.trace
+Processing file ./traces/kernel-102.trace
+Processing file ./traces/kernel-103.trace
+Processing file ./traces/kernel-104.trace
+Processing file ./traces/kernel-105.trace
+Processing file ./traces/kernel-106.trace
+Processing file ./traces/kernel-107.trace
+Processing file ./traces/kernel-108.trace
+Processing file ./traces/kernel-109.trace
+Processing file ./traces/kernel-110.trace
+Processing file ./traces/kernel-111.trace
+Processing file ./traces/kernel-112.trace
+Processing file ./traces/kernel-113.trace
+Processing file ./traces/kernel-114.trace
+Processing file ./traces/kernel-115.trace
+Processing file ./traces/kernel-116.trace
+Processing file ./traces/kernel-117.trace
+Processing file ./traces/kernel-118.trace
+Processing file ./traces/kernel-119.trace
+Processing file ./traces/kernel-120.trace
+Processing file ./traces/kernel-121.trace
+Processing file ./traces/kernel-122.trace
+Processing file ./traces/kernel-123.trace
+Processing file ./traces/kernel-124.trace
+Processing file ./traces/kernel-125.trace
+Processing file ./traces/kernel-126.trace
+Processing file ./traces/kernel-127.trace
+Processing file ./traces/kernel-128.trace
+Processing file ./traces/kernel-129.trace
+Processing file ./traces/kernel-130.trace
+Processing file ./traces/kernel-131.trace
+Processing file ./traces/kernel-132.trace
+Processing file ./traces/kernel-133.trace
+Processing file ./traces/kernel-134.trace
+Processing file ./traces/kernel-135.trace
+Processing file ./traces/kernel-136.trace
+Processing file ./traces/kernel-137.trace
+Processing file ./traces/kernel-138.trace
+Processing file ./traces/kernel-139.trace
+Processing file ./traces/kernel-140.trace
+Processing file ./traces/kernel-141.trace
+Processing file ./traces/kernel-142.trace
+Processing file ./traces/kernel-143.trace
+Processing file ./traces/kernel-144.trace
+Processing file ./traces/kernel-145.trace
+Processing file ./traces/kernel-146.trace
+Processing file ./traces/kernel-147.trace
+Processing file ./traces/kernel-148.trace
+Processing file ./traces/kernel-149.trace
+Processing file ./traces/kernel-150.trace
+Processing file ./traces/kernel-151.trace
+Processing file ./traces/kernel-152.trace
+Processing file ./traces/kernel-153.trace
+Processing file ./traces/kernel-154.trace
+Processing file ./traces/kernel-155.trace
+Processing file ./traces/kernel-156.trace
+Processing file ./traces/kernel-157.trace
+Processing file ./traces/kernel-158.trace
+Processing file ./traces/kernel-159.trace
+Processing file ./traces/kernel-160.trace
+Processing file ./traces/kernel-161.trace
+Processing file ./traces/kernel-162.trace
+Processing file ./traces/kernel-163.trace
+Processing file ./traces/kernel-164.trace
+Processing file ./traces/kernel-165.trace
+Processing file ./traces/kernel-166.trace
+Moving back to /home/ctshinn/eec-272-project/prunedense2csrbyP
+Moving into /home/ctshinn/eec-272-project/prunedense2csrbyP/rn50_traces/80/bottleneck_projection_block_group_projection_block_group3/
+------------- NVBit (NVidia Binary Instrumentation Tool v1.5.3) Loaded --------------
+NVBit core environment variables (mostly for nvbit-devs):
+            NVDISASM = nvdisasm - override default nvdisasm found in PATH
+            NOBANNER = 0 - if set, does not print this banner
+---------------------------------------------------------------------------------
+         INSTR_BEGIN = 0 - Beginning of the instruction interval where to apply instrumentation
+           INSTR_END = 4294967295 - End of the instruction interval where to apply instrumentation
+    EXCLUDE_PRED_OFF = 1 - Exclude predicated off instruction from count
+DYNAMIC_KERNEL_LIMIT_END = 0 - Limit of the number kernel to be printed, 0 means no limit
+DYNAMIC_KERNEL_LIMIT_START = 0 - start to report kernel from this kernel id, 0 means starts from the beginning, i.e. first kernel
+   ACTIVE_FROM_START = 1 - Start instruction tracing from start or wait for cuProfilerStart and cuProfilerStop. If set to 0, DYNAMIC_KERNEL_LIMIT options have no effect
+        TOOL_VERBOSE = 0 - Enable verbosity inside the tool
+       TOOL_COMPRESS = 1 - Enable traces compression
+     TOOL_TRACE_CORE = 0 - write the core id in the traces
+----------------------------------------------------------------------------------------------------
+example of pruneDense2csrByPercentage 
+prune out 80.0 percentage of A 
+lworkInBytes = 8393504 
+Writing results to ./traces/kernel-1.trace
+Writing results to ./traces/kernel-2.trace
+Writing results to ./traces/kernel-3.trace
+Writing results to ./traces/kernel-4.trace
+Writing results to ./traces/kernel-5.trace
+Writing results to ./traces/kernel-6.trace
+Writing results to ./traces/kernel-7.trace
+Writing results to ./traces/kernel-8.trace
+Writing results to ./traces/kernel-9.trace
+Writing results to ./traces/kernel-10.trace
+Writing results to ./traces/kernel-11.trace
+Writing results to ./traces/kernel-12.trace
+Writing results to ./traces/kernel-13.trace
+Writing results to ./traces/kernel-14.trace
+Writing results to ./traces/kernel-15.trace
+Writing results to ./traces/kernel-16.trace
+Writing results to ./traces/kernel-17.trace
+Writing results to ./traces/kernel-18.trace
+Writing results to ./traces/kernel-19.trace
+Writing results to ./traces/kernel-20.trace
+Writing results to ./traces/kernel-21.trace
+Writing results to ./traces/kernel-22.trace
+Writing results to ./traces/kernel-23.trace
+Writing results to ./traces/kernel-24.trace
+Writing results to ./traces/kernel-25.trace
+Writing results to ./traces/kernel-26.trace
+Writing results to ./traces/kernel-27.trace
+Writing results to ./traces/kernel-28.trace
+Writing results to ./traces/kernel-29.trace
+Writing results to ./traces/kernel-30.trace
+Writing results to ./traces/kernel-31.trace
+Writing results to ./traces/kernel-32.trace
+Writing results to ./traces/kernel-33.trace
+Writing results to ./traces/kernel-34.trace
+Writing results to ./traces/kernel-35.trace
+Writing results to ./traces/kernel-36.trace
+Writing results to ./traces/kernel-37.trace
+Writing results to ./traces/kernel-38.trace
+Writing results to ./traces/kernel-39.trace
+Writing results to ./traces/kernel-40.trace
+Writing results to ./traces/kernel-41.trace
+Writing results to ./traces/kernel-42.trace
+Writing results to ./traces/kernel-43.trace
+Writing results to ./traces/kernel-44.trace
+Writing results to ./traces/kernel-45.trace
+Writing results to ./traces/kernel-46.trace
+Writing results to ./traces/kernel-47.trace
+Writing results to ./traces/kernel-48.trace
+Writing results to ./traces/kernel-49.trace
+Writing results to ./traces/kernel-50.trace
+Writing results to ./traces/kernel-51.trace
+Writing results to ./traces/kernel-52.trace
+Writing results to ./traces/kernel-53.trace
+Writing results to ./traces/kernel-54.trace
+Writing results to ./traces/kernel-55.trace
+Writing results to ./traces/kernel-56.trace
+Writing results to ./traces/kernel-57.trace
+Writing results to ./traces/kernel-58.trace
+Writing results to ./traces/kernel-59.trace
+Writing results to ./traces/kernel-60.trace
+Writing results to ./traces/kernel-61.trace
+Writing results to ./traces/kernel-62.trace
+Writing results to ./traces/kernel-63.trace
+Writing results to ./traces/kernel-64.trace
+Writing results to ./traces/kernel-65.trace
+Writing results to ./traces/kernel-66.trace
+Writing results to ./traces/kernel-67.trace
+Writing results to ./traces/kernel-68.trace
+Writing results to ./traces/kernel-69.trace
+Writing results to ./traces/kernel-70.trace
+Writing results to ./traces/kernel-71.trace
+Writing results to ./traces/kernel-72.trace
+Writing results to ./traces/kernel-73.trace
+Writing results to ./traces/kernel-74.trace
+Writing results to ./traces/kernel-75.trace
+Writing results to ./traces/kernel-76.trace
+Writing results to ./traces/kernel-77.trace
+Writing results to ./traces/kernel-78.trace
+Writing results to ./traces/kernel-79.trace
+Writing results to ./traces/kernel-80.trace
+Writing results to ./traces/kernel-81.trace
+Writing results to ./traces/kernel-82.trace
+Writing results to ./traces/kernel-83.trace
+Writing results to ./traces/kernel-84.trace
+Writing results to ./traces/kernel-85.trace
+Writing results to ./traces/kernel-86.trace
+Writing results to ./traces/kernel-87.trace
+Writing results to ./traces/kernel-88.trace
+Writing results to ./traces/kernel-89.trace
+Writing results to ./traces/kernel-90.trace
+Writing results to ./traces/kernel-91.trace
+Writing results to ./traces/kernel-92.trace
+Writing results to ./traces/kernel-93.trace
+Writing results to ./traces/kernel-94.trace
+Writing results to ./traces/kernel-95.trace
+Writing results to ./traces/kernel-96.trace
+Writing results to ./traces/kernel-97.trace
+Writing results to ./traces/kernel-98.trace
+Writing results to ./traces/kernel-99.trace
+Writing results to ./traces/kernel-100.trace
+Writing results to ./traces/kernel-101.trace
+Writing results to ./traces/kernel-102.trace
+Writing results to ./traces/kernel-103.trace
+Writing results to ./traces/kernel-104.trace
+Writing results to ./traces/kernel-105.trace
+Writing results to ./traces/kernel-106.trace
+Writing results to ./traces/kernel-107.trace
+Writing results to ./traces/kernel-108.trace
+Writing results to ./traces/kernel-109.trace
+Writing results to ./traces/kernel-110.trace
+Writing results to ./traces/kernel-111.trace
+Writing results to ./traces/kernel-112.trace
+Writing results to ./traces/kernel-113.trace
+Writing results to ./traces/kernel-114.trace
+Writing results to ./traces/kernel-115.trace
+Writing results to ./traces/kernel-116.trace
+Writing results to ./traces/kernel-117.trace
+Writing results to ./traces/kernel-118.trace
+Writing results to ./traces/kernel-119.trace
+Writing results to ./traces/kernel-120.trace
+Writing results to ./traces/kernel-121.trace
+Writing results to ./traces/kernel-122.trace
+Writing results to ./traces/kernel-123.trace
+Writing results to ./traces/kernel-124.trace
+Writing results to ./traces/kernel-125.trace
+Writing results to ./traces/kernel-126.trace
+Writing results to ./traces/kernel-127.trace
+Writing results to ./traces/kernel-128.trace
+Writing results to ./traces/kernel-129.trace
+Writing results to ./traces/kernel-130.trace
+Writing results to ./traces/kernel-131.trace
+Writing results to ./traces/kernel-132.trace
+Writing results to ./traces/kernel-133.trace
+Writing results to ./traces/kernel-134.trace
+Writing results to ./traces/kernel-135.trace
+Writing results to ./traces/kernel-136.trace
+Writing results to ./traces/kernel-137.trace
+Writing results to ./traces/kernel-138.trace
+Writing results to ./traces/kernel-139.trace
+Writing results to ./traces/kernel-140.trace
+Writing results to ./traces/kernel-141.trace
+Writing results to ./traces/kernel-142.trace
+Writing results to ./traces/kernel-143.trace
+Writing results to ./traces/kernel-144.trace
+Writing results to ./traces/kernel-145.trace
+Writing results to ./traces/kernel-146.trace
+Writing results to ./traces/kernel-147.trace
+Writing results to ./traces/kernel-148.trace
+Writing results to ./traces/kernel-149.trace
+Writing results to ./traces/kernel-150.trace
+Writing results to ./traces/kernel-151.trace
+Writing results to ./traces/kernel-152.trace
+Writing results to ./traces/kernel-153.trace
+Writing results to ./traces/kernel-154.trace
+Writing results to ./traces/kernel-155.trace
+Writing results to ./traces/kernel-156.trace
+Writing results to ./traces/kernel-157.trace
+Writing results to ./traces/kernel-158.trace
+Writing results to ./traces/kernel-159.trace
+Writing results to ./traces/kernel-160.trace
+Writing results to ./traces/kernel-161.trace
+Writing results to ./traces/kernel-162.trace
+Writing results to ./traces/kernel-163.trace
+Writing results to ./traces/kernel-164.trace
+Writing results to ./traces/kernel-165.trace
+nnzC = 104857
+Writing results to ./traces/kernel-166.trace
+Processing file ./traces/kernel-1.trace
+Processing file ./traces/kernel-2.trace
+Processing file ./traces/kernel-3.trace
+Processing file ./traces/kernel-4.trace
+Processing file ./traces/kernel-5.trace
+Processing file ./traces/kernel-6.trace
+Processing file ./traces/kernel-7.trace
+Processing file ./traces/kernel-8.trace
+Processing file ./traces/kernel-9.trace
+Processing file ./traces/kernel-10.trace
+Processing file ./traces/kernel-11.trace
+Processing file ./traces/kernel-12.trace
+Processing file ./traces/kernel-13.trace
+Processing file ./traces/kernel-14.trace
+Processing file ./traces/kernel-15.trace
+Processing file ./traces/kernel-16.trace
+Processing file ./traces/kernel-17.trace
+Processing file ./traces/kernel-18.trace
+Processing file ./traces/kernel-19.trace
+Processing file ./traces/kernel-20.trace
+Processing file ./traces/kernel-21.trace
+Processing file ./traces/kernel-22.trace
+Processing file ./traces/kernel-23.trace
+Processing file ./traces/kernel-24.trace
+Processing file ./traces/kernel-25.trace
+Processing file ./traces/kernel-26.trace
+Processing file ./traces/kernel-27.trace
+Processing file ./traces/kernel-28.trace
+Processing file ./traces/kernel-29.trace
+Processing file ./traces/kernel-30.trace
+Processing file ./traces/kernel-31.trace
+Processing file ./traces/kernel-32.trace
+Processing file ./traces/kernel-33.trace
+Processing file ./traces/kernel-34.trace
+Processing file ./traces/kernel-35.trace
+Processing file ./traces/kernel-36.trace
+Processing file ./traces/kernel-37.trace
+Processing file ./traces/kernel-38.trace
+Processing file ./traces/kernel-39.trace
+Processing file ./traces/kernel-40.trace
+Processing file ./traces/kernel-41.trace
+Processing file ./traces/kernel-42.trace
+Processing file ./traces/kernel-43.trace
+Processing file ./traces/kernel-44.trace
+Processing file ./traces/kernel-45.trace
+Processing file ./traces/kernel-46.trace

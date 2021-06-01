@@ -44,45 +44,45 @@ cuSparsePrune_95:
 
 
 cuSparseSpMV_95:
-    exec_dir: "../../../workloads/spmv/"
-    data_dirs: "../../../rn50_magnitude_pruning/95/"
+    exec_dir: "/home/ctshinn/eec-272-project/workloads"
+    data_dirs: "rn50_magnitude_pruning/95/"
     execs:
-        - prunedense2csrbyP:
-            - args:  ../../../rn50_magnitude_pruning/95/bottleneck_1_block_group_projection_block_group3.smtx
+        - spmv_csr_example:
+            - args:  rn50_magnitude_pruning/95/bottleneck_1_block_group_projection_block_group3.smtx
               accel-sim-mem: 12G
-            - args: ../../../rn50_magnitude_pruning/95/bottleneck_1_block_group2_1_1.smtx
+            - args: rn50_magnitude_pruning/95/bottleneck_1_block_group2_1_1.smtx
               accel-sim-mem: 12G
-            - args: ../../../rn50_magnitude_pruning/95/bottleneck_3_block_group1_1_1.smtx
+            - args: rn50_magnitude_pruning/95/bottleneck_3_block_group1_1_1.smtx
               accel-sim-mem: 12G
-            - args: ../../../rn50_magnitude_pruning/95/bottleneck_projection_block_group_projection_block_group3.smtx
+            - args: rn50_magnitude_pruning/95/bottleneck_projection_block_group_projection_block_group3.smtx
               accel-sim-mem: 12G
 
 
 cuSparseSpMV_80:
-    exec_dir: "../../../workloads/spmv/"
-    data_dirs: "../../../rn50_magnitude_pruning/80/"
+    exec_dir: "/home/ctshinn/eec-272-project/workloads"
+    data_dirs: "rn50_magnitude_pruning/80/"
     execs:
-        - prunedense2csrbyP:
-            - args:  ../../../rn50_magnitude_pruning/80/bottleneck_1_block_group_projection_block_group3.smtx
+        - spmv_csr_example:
+            - args:  rn50_magnitude_pruning/80/bottleneck_1_block_group_projection_block_group3.smtx
               accel-sim-mem: 12G
-            - args: ../../../rn50_magnitude_pruning/80/bottleneck_1_block_group2_1_1.smtx
+            - args: rn50_magnitude_pruning/80/bottleneck_1_block_group2_1_1.smtx
               accel-sim-mem: 12G
-            - args: ../../../rn50_magnitude_pruning/80/bottleneck_3_block_group1_1_1.smtx
+            - args: rn50_magnitude_pruning/80/bottleneck_3_block_group1_1_1.smtx
               accel-sim-mem: 12G
-            - args: ../../../rn50_magnitude_pruning/80/bottleneck_projection_block_group_projection_block_group3.smtx
+            - args: rn50_magnitude_pruning/80/bottleneck_projection_block_group_projection_block_group3.smtx
               accel-sim-mem: 12G
 
 
 cuSparseSpMV_50:
-    exec_dir: "../../../workloads/spmv/"
-    data_dirs: "../../../rn50_magnitude_pruning/50/"
+    exec_dir: "/home/ctshinn/eec-272-project/workloads"
+    data_dirs: "rn50_magnitude_pruning/50/"
     execs:
-        - prunedense2csrbyP:
-            - args:  ../../../rn50_magnitude_pruning/50/bottleneck_1_block_group_projection_block_group3.smtx
+        - spmv_csr_example:
+            - args:  rn50_magnitude_pruning/50/bottleneck_1_block_group_projection_block_group3.smtx
               accel-sim-mem: 12G
-            - args: ../../../rn50_magnitude_pruning/50/bottleneck_1_block_group2_1_1.smtx
+            - args: rn50_magnitude_pruning/50/bottleneck_1_block_group2_1_1.smtx
               accel-sim-mem: 12G
-            - args: ../../../rn50_magnitude_pruning/50/bottleneck_3_block_group1_1_1.smtx
+            - args: rn50_magnitude_pruning/50/bottleneck_3_block_group1_1_1.smtx
               accel-sim-mem: 12G
-            - args: ../../../rn50_magnitude_pruning/50/bottleneck_projection_block_group_projection_block_group3.smtx
+            - args: rn50_magnitude_pruning/50/bottleneck_projection_block_group_projection_block_group3.smtx
               accel-sim-mem: 12G
